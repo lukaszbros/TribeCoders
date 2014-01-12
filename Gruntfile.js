@@ -14,6 +14,9 @@ module.exports = function (grunt) {
 
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
+    
+    // Load coffeescript
+    grunt.loadNpmTasks('grunt-contrib-coffee');
 
     // Define the configuration for all the tasks
     grunt.initConfig({
@@ -45,6 +48,10 @@ module.exports = function (grunt) {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass:server', 'autoprefixer']
             },
+            coffee: {
+                files: ['<%= yeoman.app %>/coffee/*.coffee'],
+                tasks: ['coffee:compile']
+            },
             styles: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
                 tasks: ['newer:copy:styles', 'autoprefixer']
@@ -58,6 +65,18 @@ module.exports = function (grunt) {
                     '.tmp/styles/{,*/}*.css',
                     '<%= yeoman.app %>/images/{,*/}*.{gif,jpeg,jpg,png,svg,webp}'
                 ]
+            }
+        },
+        
+        coffee: {
+            compile: {
+                options: {
+                    sourceMap: true,
+                    sourceMapDir: '<%= yeoman.app %>/maps/' // source map files will be created here
+                },
+                files: {
+                    '<%= yeoman.app %>/scripts/main.js': ['<%= yeoman.app %>/coffee/*.coffee']
+                }
             }
         },
 
@@ -121,6 +140,7 @@ module.exports = function (grunt) {
             all: [
                 'Gruntfile.js',
                 '<%= yeoman.app %>/scripts/{,*/}*.js',
+                '!<%= yeoman.app %>/scripts/main.js',
                 '!<%= yeoman.app %>/scripts/vendor/*',
                 'test/spec/{,*/}*.js'
             ]
@@ -405,4 +425,5 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
+    
 };
