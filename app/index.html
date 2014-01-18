@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="styles/page-index.css">
         <!-- endbuild -->
         <script src="bower_components/modernizr/modernizr.js"></script>
+        <script src="scripts/vendor/heartcode-canvasloader-min.js"></script>
 
     </head>
     <body>
@@ -38,14 +39,28 @@
                 <div id="tag-line" class="chaparral">
                     Apps you need
                     <hr>
-                    <div class="arrow-down"></div>
+                    <div class="arrow-down">&nbsp;</div>
                 </div>
             </div>
         </div>
 
         <div id="menu">
+            <a id="menu-button" href="#menu">
+                &#9776;
+            </a>
+            <ol>
+                <li><a href="about">ABOUT US</a></li>
+                <li><a href="services">SERVICES</a></li>
+                <li><a href="methodology">METHODOLOGY</a></li>
+                <li><a href="portfolio">PORTFOLIO</a></li>
+                <li><a href="contact">CONTACT US</a></li>
+            </ol>
+        </div>
+        
+        <div id="canvasloader-container">
             &nbsp;
         </div>
+        
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
