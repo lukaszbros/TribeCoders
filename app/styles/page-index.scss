@@ -1,0 +1,39 @@
+#main-background {
+  background-image: image-url('main-background.jpg');
+  position: relative;
+  margin: 0 auto;
+  height: 1000px;
+}
+
+#main-logo {
+  margin:auto;
+  width: 250px;
+  margin-top: 150px;
+  text-align: center;
+  color: #ffffff;
+  
+  #main-company-name {
+    font-size: 3.5em;
+    .sans-black {
+      font-size: 1.5em;
+    }
+  }
+}
+
+#tag-line {
+  margin:auto;
+  width: 250px;
+  margin-top: 100px;
+  text-align: center;
+  color: #00cfc9;
+  font-size: 1.5em;
+  hr {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-color: #00cfc9;
+  }
+  .arrow-down {
+    border-top-color:#00cfc9;
+    margin: auto;
+  }
+}
