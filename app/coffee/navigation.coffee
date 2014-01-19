@@ -18,10 +18,9 @@ $(document).ready ->
     else
       return decodeURIComponent(results[1].replace(/\+/g, ' '))
   
-  runHistory = (window)->
-    history = window.History;
-    return false unless history.enabled
-    history.Adapter.bind window,'statechange', ->
+  runHistory = ()->
+    return false unless History.enabled
+    History.Adapter.bind window,'statechange', ->
       state = History.getState()
       forward = getParameterByName('forward')
       if (forward && forward != '')
@@ -36,14 +35,14 @@ $(document).ready ->
         highlightMenu(address);
         $('footer').fadeIn 'fast'
       
-  runHistory(window)
+  runHistory()
   
   forward = getParameterByName('forward')
   if (forward && forward != '')
     History.pushState(null, null, forward)
   else
     #Home page load
-    History.pushState(null, null, 'home.html')
+    History.pushState(null, null, 'index.html')
     
   #Select logo text depending on shown address
   #selectLogo = (address)->
@@ -79,6 +78,18 @@ $(document).ready ->
   #$('#logo').click ->
   #  loadContent('home.html');
           
+  isMenuOpen = false;
+  $('#menu').on 'click', '#menu-button', (event) ->
+    event.preventDefault()
+    if isMenuOpen
+      $('#menu').animate({left: '-190'})
+      $('#menu-button').animate({left: '10'})
+      isMenuOpen = false
+    else
+      $('#menu').animate({left: '0'})
+      $('#menu-button').animate({left: '200'})
+      
+      isMenuOpen = true
   #All links
   $('body').on 'click', 'a:not(.direct)', (event) ->
     event.preventDefault()

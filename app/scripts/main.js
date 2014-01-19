@@ -1,7 +1,7 @@
 (function() {
   'use strict';
   $(document).ready(function() {
-    var cl, forward, getParameterByName, highlightMenu, loadContent, runHistory;
+    var cl, forward, getParameterByName, highlightMenu, isMenuOpen, loadContent, runHistory;
     cl = new CanvasLoader('canvasloader-container');
     cl.setColor('#dddddd');
     cl.setShape('spiral');
@@ -20,13 +20,11 @@
         return decodeURIComponent(results[1].replace(/\+/g, ' '));
       }
     };
-    runHistory = function(window) {
-      var history;
-      history = window.History;
-      if (!history.enabled) {
+    runHistory = function() {
+      if (!History.enabled) {
         return false;
       }
-      return history.Adapter.bind(window, 'statechange', function() {
+      return History.Adapter.bind(window, 'statechange', function() {
         var forward, state;
         state = History.getState();
         forward = getParameterByName('forward');
@@ -46,12 +44,12 @@
         });
       });
     };
-    runHistory(window);
+    runHistory();
     forward = getParameterByName('forward');
     if (forward && forward !== '') {
       History.pushState(null, null, forward);
     } else {
-      History.pushState(null, null, 'home.html');
+      History.pushState(null, null, 'index.html');
     }
     highlightMenu = function(address) {
       $('#menu a').removeAttr('style');
@@ -91,6 +89,27 @@
         return History.pushState(null, null, address);
       });
     };
+    isMenuOpen = false;
+    $('#menu').on('click', '#menu-button', function(event) {
+      event.preventDefault();
+      if (isMenuOpen) {
+        $('#menu').animate({
+          left: '-190'
+        });
+        $('#menu-button').animate({
+          left: '10'
+        });
+        return isMenuOpen = false;
+      } else {
+        $('#menu').animate({
+          left: '0'
+        });
+        $('#menu-button').animate({
+          left: '200'
+        });
+        return isMenuOpen = true;
+      }
+    });
     $('body').on('click', 'a:not(.direct)', function(event) {
       var href;
       event.preventDefault();
