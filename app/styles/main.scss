@@ -12,6 +12,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 /* Space out content a bit */
 body {
+  font-family: Novecentosanswide-Normal;
 }
 
 a {
@@ -36,6 +37,37 @@ a {
 }
 .chaparral {
   font-style: italic;
+}
+
+.Novecentosanswide-Bold { 
+  font-family: Novecentosanswide-Bold;
+  font-weight: normal;
+  font-style: normal;
+}
+.Novecentosanswide-Book { 
+  font-family: Novecentosanswide-Book;
+  font-weight: normal;
+  font-style: normal;
+}
+.Novecentosanswide-DemiBold { 
+  font-family: Novecentosanswide-DemiBold;
+  font-weight: normal;
+  font-style: normal;
+}
+.Novecentosanswide-Light { 
+  font-family: Novecentosanswide-Light;
+  font-weight: normal;
+  font-style: normal;
+}
+.Novecentosanswide-Medium { 
+  font-family: Novecentosanswide-Medium;
+  font-weight: normal;
+  font-style: normal;
+}
+.Novecentosanswide-Normal { 
+  font-family: Novecentosanswide-Normal;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .blue {
@@ -92,8 +124,9 @@ a {
     a {
       position: relative;
       top: 1em;
-      left: -10px;
-      font-size: 1.3em;
+      left: -10px;      
+      font-family: Novecentosanswide-Bold;
+      font-size: 1.3em;      
       //color: #ffffff;
     }
   }
