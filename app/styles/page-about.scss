@@ -1,3 +1,52 @@
-#klaudyna {
-  background-image: image-url('klaudyna.png');
+@import "config";
+
+#about {
+  .info {
+    text-align:center;
+    
+  }
+  .photo {
+    height: 276px;
+    background-repeat: no-repeat;
+    background-position: center;
+    .circle {
+      position: relative;
+      top: 138px;
+      left: 60%;
+      border-radius: 50%;
+      width: 138px;
+      height: 138px;
+      background-color: $about-base-color;
+      text-align: center;
+      font-size: 1.2em; 
+      padding-top: 30px;
+      color: #ffffff; 
+    }
+  }
+  #klaudyna {
+    background-image: image-url('about-klaudyna.png');
+  }
+  #lukasz {
+    background-image: image-url('about-lukasz.png');
+  }  
+  #michal {
+    background-image: image-url('about-michal.png');
+  }
 }
+
+#about-footer-background {
+  background-image: image-url('background-about-footer.jpg');
+  position: relative;
+  margin: 0 auto;
+  height: 1000px;
+  
+  #footer-text {
+    font-size: 4em;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .row {
+    margin-top: 250px;
+  }
+}
+
