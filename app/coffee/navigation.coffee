@@ -31,7 +31,8 @@ $(document).ready ->
         $(@).fadeIn('fast')      
         urlArray = state.url.split('/')
         address = urlArray[urlArray.length-1]
-        _gaq.push(['_trackPageview', address]);     
+        if (_gaq?)
+          _gaq.push(['_trackPageview', address])     
         highlightMenu(address);
         $('footer').fadeIn 'fast'
       
@@ -42,7 +43,7 @@ $(document).ready ->
     History.pushState(null, null, forward)
   else
     #Home page load
-    History.pushState(null, null, 'index.html')
+    #History.pushState(null, null, 'index.html')
     
   #Select logo text depending on shown address
   #selectLogo = (address)->
@@ -98,6 +99,9 @@ $(document).ready ->
     
   $('body').on 'click', '.project', ->
     loadContent('portfolio-' + $(@).attr('id') + '.html')
+
+  #Load bease page
+  loadContent('about.html')  
     
   #Hover efect on logo
   #$('body').on 'mouseenter ', '#logo .absolut-center', () -> $(@).stop().animate({color: "#cccccc"})

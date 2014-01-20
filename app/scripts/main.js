@@ -38,7 +38,9 @@
           $(this).fadeIn('fast');
           urlArray = state.url.split('/');
           address = urlArray[urlArray.length - 1];
-          _gaq.push(['_trackPageview', address]);
+          if ((typeof _gaq !== "undefined" && _gaq !== null)) {
+            _gaq.push(['_trackPageview', address]);
+          }
           highlightMenu(address);
           return $('footer').fadeIn('fast');
         });
@@ -49,7 +51,7 @@
     if (forward && forward !== '') {
       History.pushState(null, null, forward);
     } else {
-      History.pushState(null, null, 'index.html');
+
     }
     highlightMenu = function(address) {
       $('#menu a').removeAttr('style');
@@ -116,13 +118,12 @@
       href = $(this).attr('href');
       return loadContent(href);
     });
-    return $('body').on('click', '.project', function() {
+    $('body').on('click', '.project', function() {
       return loadContent('portfolio-' + $(this).attr('id') + '.html');
     });
+    return loadContent('about.html');
   });
 
 }).call(this);
 
-/*
 //# sourceMappingURL=../../app/maps/main.js.map
-*/
