@@ -5,6 +5,28 @@
     text-align:center;
     
   }
+  .details {
+    text-align: center;
+    padding-top: 60px;    
+    .name {
+      color: $about-base-color;
+      font-size: 2.5em;
+    }
+    hr {
+      display: block; height: 1px;
+      border: 0; border-top: 1px solid $about-base-color;      
+      width: 30px;      
+    }
+    .about-tag-line {
+      width: 70%;
+      float:left;
+    }
+    .quotes {
+      width: 15%;
+      float:left;
+      font-size: 5em;
+    }
+  }
   .photo {
     height: 276px;
     background-repeat: no-repeat;
