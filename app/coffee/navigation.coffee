@@ -80,22 +80,28 @@ $(document).ready ->
   #  loadContent('home.html');
           
   isMenuOpen = false;
+  openMenu = () ->
+    $('#menu').animate({left: '0'})
+    $('#menu-button').animate({left: '200'})
+    isMenuOpen = true    
+  closeMenu = () ->
+    $('#menu').animate({left: '-190'})
+    $('#menu-button').animate({left: '10'})
+    isMenuOpen = false
+    
   $('#menu').on 'click', '#menu-button', (event) ->
     event.preventDefault()
     if isMenuOpen
-      $('#menu').animate({left: '-190'})
-      $('#menu-button').animate({left: '10'})
-      isMenuOpen = false
+      closeMenu()
     else
-      $('#menu').animate({left: '0'})
-      $('#menu-button').animate({left: '200'})
+      openMenu()
       
-      isMenuOpen = true
   #All links
   $('body').on 'click', 'a:not(.direct)', (event) ->
     event.preventDefault()
     href = $(@).attr('href')
     loadContent(href)
+    closeMenu()
     
   $('body').on 'click', '.project', ->
     loadContent('portfolio-' + $(@).attr('id') + '.html')

@@ -1,7 +1,7 @@
 (function() {
   'use strict';
   $(document).ready(function() {
-    var cl, forward, getParameterByName, highlightMenu, isMenuOpen, loadContent, runHistory;
+    var cl, closeMenu, forward, getParameterByName, highlightMenu, isMenuOpen, loadContent, openMenu, runHistory;
     cl = new CanvasLoader('canvasloader-container');
     cl.setColor('#dddddd');
     cl.setShape('spiral');
@@ -92,31 +92,38 @@
       });
     };
     isMenuOpen = false;
+    openMenu = function() {
+      $('#menu').animate({
+        left: '0'
+      });
+      $('#menu-button').animate({
+        left: '200'
+      });
+      return isMenuOpen = true;
+    };
+    closeMenu = function() {
+      $('#menu').animate({
+        left: '-190'
+      });
+      $('#menu-button').animate({
+        left: '10'
+      });
+      return isMenuOpen = false;
+    };
     $('#menu').on('click', '#menu-button', function(event) {
       event.preventDefault();
       if (isMenuOpen) {
-        $('#menu').animate({
-          left: '-190'
-        });
-        $('#menu-button').animate({
-          left: '10'
-        });
-        return isMenuOpen = false;
+        return closeMenu();
       } else {
-        $('#menu').animate({
-          left: '0'
-        });
-        $('#menu-button').animate({
-          left: '200'
-        });
-        return isMenuOpen = true;
+        return openMenu();
       }
     });
     $('body').on('click', 'a:not(.direct)', function(event) {
       var href;
       event.preventDefault();
       href = $(this).attr('href');
-      return loadContent(href);
+      loadContent(href);
+      return closeMenu();
     });
     $('body').on('click', '.project', function() {
       return loadContent('portfolio-' + $(this).attr('id') + '.html');
