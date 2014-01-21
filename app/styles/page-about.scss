@@ -3,14 +3,34 @@
 #about {
   .info {
     text-align:center;
-    
+    font-size: 1.2em;
+    font-family: "chaparral-pro";
+    color: #000000;
   }
+  
+  .divider {
+    text-align:center;
+    hr {
+      margin-top: 2px;
+      margin-bottom: -1px;
+      display: block; height: 1px;
+      border: 0; border-top: 1px solid $about-base-color;      
+      width: 80px; 
+    }
+    .arrow-down {
+      border-top-color: $about-base-color;
+      margin: auto;
+    }
+  }
+  
   .details {
     text-align: center;
     padding-top: 60px;    
     .name {
       color: $about-base-color;
       font-size: 2.5em;
+      font-family: "chaparral-pro";
+      font-style: italic;
     }
     hr {
       display: block; height: 1px;
@@ -20,13 +40,19 @@
     .about-tag-line {
       width: 70%;
       float:left;
+      font-size: 1.2em;
+      font-family: "chaparral-pro";
+      font-style: italic;
+      color: #000000;
     }
     .quotes {
       width: 15%;
       float:left;
       font-size: 5em;
+      font-family: "chaparral-pro";
     }
   }
+  
   .photo {
     height: 276px;
     background-repeat: no-repeat;
