@@ -70,7 +70,6 @@ $(document).ready ->
     urlArray = state.url.split('/')
     if (urlArray[urlArray.length-1] == address) 
       return;      
-    $('footer').fadeOut 'fast', ->
     $('#main_content').fadeOut 'fast', ->
       cl.show()
       History.pushState(null,null,address)
@@ -102,6 +101,7 @@ $(document).ready ->
     href = $(@).attr('href')
     loadContent(href)
     closeMenu()
+    $('#main-background').fadeOut 'fast'
     
   $('body').on 'click', '.project', ->
     loadContent('portfolio-' + $(@).attr('id') + '.html')

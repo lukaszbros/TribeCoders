@@ -85,7 +85,6 @@
       if (urlArray[urlArray.length - 1] === address) {
         return;
       }
-      $('footer').fadeOut('fast', function() {});
       return $('#main_content').fadeOut('fast', function() {
         cl.show();
         return History.pushState(null, null, address);
@@ -123,7 +122,8 @@
       event.preventDefault();
       href = $(this).attr('href');
       loadContent(href);
-      return closeMenu();
+      closeMenu();
+      return $('#main-background').fadeOut('fast');
     });
     $('body').on('click', '.project', function() {
       return loadContent('portfolio-' + $(this).attr('id') + '.html');
