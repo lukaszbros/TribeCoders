@@ -1,5 +1,28 @@
 @import "config";
 
+#about-header-background {
+  background-image: image-url('background-main.jpg');
+  background-position: center bottom;
+  background-size: cover;
+  position: relative;
+  margin: 0 auto;
+  height: 250px;
+  
+  #motto {
+    margin:auto;
+    width: 600px;
+    margin-top: 40px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.5em;
+    font-family: "chaparral-pro";
+    hr {
+      width: 30px;
+    }
+  }
+}
+
+
 #about {
   .info {
     text-align:center;

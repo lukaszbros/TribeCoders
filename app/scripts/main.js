@@ -49,6 +49,7 @@
     runHistory();
     forward = getParameterByName('forward');
     if (forward && forward !== '') {
+      $('#main-background').fadeOut('fast');
       History.pushState(null, null, forward);
     } else {
 
@@ -125,10 +126,9 @@
       closeMenu();
       return $('#main-background').fadeOut('fast');
     });
-    $('body').on('click', '.project', function() {
+    return $('body').on('click', '.project', function() {
       return loadContent('portfolio-' + $(this).attr('id') + '.html');
     });
-    return loadContent('about.html');
   });
 
 }).call(this);

@@ -40,6 +40,7 @@ $(document).ready ->
   
   forward = getParameterByName('forward')
   if (forward && forward != '')
+    $('#main-background').fadeOut 'fast'
     History.pushState(null, null, forward)
   else
     #Home page load
@@ -107,7 +108,7 @@ $(document).ready ->
     loadContent('portfolio-' + $(@).attr('id') + '.html')
 
   #Load bease page
-  loadContent('about.html')  
+  #loadContent('about.html')  
     
   #Hover efect on logo
   #$('body').on 'mouseenter ', '#logo .absolut-center', () -> $(@).stop().animate({color: "#cccccc"})
