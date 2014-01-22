@@ -83,8 +83,8 @@ $(document).ready ->
     $('#menu-button').animate({left: '200'})
     isMenuOpen = true    
   closeMenu = () ->
-    $('#menu').animate({left: '-190'})
-    $('#menu-button').animate({left: '10'})
+    $('#menu').animate({left: '-195'})
+    $('#menu-button').animate({left: '5'})
     isMenuOpen = false
     
   $('#menu').on 'click', '#menu-button', (event) ->

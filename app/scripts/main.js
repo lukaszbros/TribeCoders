@@ -110,10 +110,10 @@
     };
     closeMenu = function() {
       $('#menu').animate({
-        left: '-190'
+        left: '-195'
       });
       $('#menu-button').animate({
-        left: '10'
+        left: '5'
       });
       return isMenuOpen = false;
     };
