@@ -1,6 +1,6 @@
 (function() {
   $(document).ready(function() {
-    var cl, closeMenu, forward, getParameterByName, highlightMenu, isMenuOpen, loadContent, openMenu, runHistory;
+    var cl, closeMenu, forward, getParameterByName, isMenuOpen, loadContent, openMenu, runHistory;
     cl = new CanvasLoader('canvasloader-container');
     cl.setColor('#dddddd');
     cl.setShape('spiral');
@@ -40,7 +40,6 @@
           if ((typeof _gaq !== "undefined" && _gaq !== null)) {
             _gaq.push(['_trackPageview', address]);
           }
-          highlightMenu(address);
           return $('footer').fadeIn('fast');
         });
       });
@@ -50,34 +49,7 @@
     if (forward && forward !== '') {
       $('#main-background').fadeOut('fast');
       History.pushState(null, null, forward);
-    } else {
-
     }
-    highlightMenu = function(address) {
-      $('#menu a').removeAttr('style');
-      switch (address) {
-        case 'about.html':
-          return $('#menu a#about').stop().animate({
-            color: '#e62799'
-          });
-        case 'services.html':
-          return $('#menu a#services').stop().animate({
-            color: '#e62799'
-          });
-        case 'methodology.html':
-          return $('#menu a#methodology').stop().animate({
-            color: '#00aed9'
-          });
-        case 'portfolio.html':
-          return $('#menu a#portfolio').stop().animate({
-            color: '#00c376'
-          });
-        default:
-          return $('#menu a#contact').stop().animate({
-            color: '#e62799'
-          });
-      }
-    };
     loadContent = function(address) {
       var state, urlArray;
       state = History.getState();
@@ -125,8 +97,12 @@
       closeMenu();
       return $('#main-background').fadeOut('fast');
     });
-    $('body').on('click', '.project', function() {
-      return loadContent('portfolio-' + $(this).attr('id') + '.html');
+    $('body').on('click', '#index-logo', function(event) {
+      History.pushState(null, null, 'base.html');
+      $('#main_content').fadeOut('fast');
+      event.preventDefault();
+      closeMenu();
+      return $('#main-background').fadeIn('fast');
     });
     $('body').on('mouseenter', '.divider', function() {
       return $(this).stop().fadeTo("fast", 1);

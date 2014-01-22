@@ -31,7 +31,6 @@ $(document).ready ->
         address = urlArray[urlArray.length-1]
         if (_gaq?)
           _gaq.push(['_trackPageview', address])     
-        highlightMenu(address);
         $('footer').fadeIn 'fast'
       
   runHistory()
@@ -40,28 +39,6 @@ $(document).ready ->
   if (forward && forward != '')
     $('#main-background').fadeOut 'fast'
     History.pushState(null, null, forward)
-  else
-    #Home page load
-    #History.pushState(null, null, 'index.html')
-    
-  #Select logo text depending on shown address
-  #selectLogo = (address)->
-  #  address = address.split("/")[-1]
-  #  switch address
-  #    when 'home.html' then $('#logo .absolut-center').html('Tribity <span class="ux">UX</span> <span class="design">Design</span> <span class="software">Software</span>')
-  #    when 'work.html' then $('#logo .absolut-center').html('Tribity<span class="subpage"> - work</span>')
-  #    when 'contact.html' then $('#logo .absolut-center').html('Tribity<span class="subpage"> - contact</span>')
-  #    when 'company.html' then $('#logo .absolut-center').html('Tribity<span class="subpage"> - company</span>')
-        
-  highlightMenu = (address) ->
-    $('#menu a').removeAttr('style');
-    switch address
-      when 'about.html' then $('#menu a#about').stop().animate({color: '#e62799'})
-      when 'services.html' then $('#menu a#services').stop().animate({color: '#e62799'})
-      when 'methodology.html' then $('#menu a#methodology').stop().animate({color: '#00aed9'})
-      when 'portfolio.html' then $('#menu a#portfolio').stop().animate({color: '#00c376'})
-      else $('#menu a#contact').stop().animate({color: '#e62799'})
-        
     
   #Load page animation function
   loadContent = (address) ->
@@ -72,10 +49,6 @@ $(document).ready ->
     $('#main_content').fadeOut 'fast', ->
       cl.show()
       History.pushState(null,null,address)
-
-  #Back to home page by clicking logo      
-  #$('#logo').click ->
-  #  loadContent('home.html');
           
   isMenuOpen = false;
   openMenu = () ->
@@ -102,8 +75,12 @@ $(document).ready ->
     closeMenu()
     $('#main-background').fadeOut 'fast'
     
-  $('body').on 'click', '.project', ->
-    loadContent('portfolio-' + $(@).attr('id') + '.html')
+  $('body').on 'click', '#index-logo', (event) ->
+    History.pushState(null,null,'base.html')
+    $('#main_content').fadeOut 'fast'
+    event.preventDefault()
+    closeMenu()
+    $('#main-background').fadeIn 'fast'
    
   $('body').on 'mouseenter', '.divider', ->
       $(this).stop().fadeTo( "fast" , 1)
@@ -115,9 +92,3 @@ $(document).ready ->
   $('body').on 'mouseleave', '.divider-revert', ->
       $(this).stop().fadeTo( "fast" , 1)
 
-  #Load bease page
-  #loadContent('about.html')  
-    
-  #Hover efect on logo
-  #$('body').on 'mouseenter ', '#logo .absolut-center', () -> $(@).stop().animate({color: "#cccccc"})
-  #$('body').on 'mouseleave ', '#logo .absolut-center', ()  -> $(@).stop().animate({color:'#333333'})  

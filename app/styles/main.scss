@@ -107,6 +107,13 @@ a {
     background-color: $color-menu-background;
     font-size: 2.5em;
   }
+  a#index-logo {
+    display:block;
+    position: relative;
+    top: 29%;    
+    left: 75px;
+    @include opacity(1);    
+  }
   
   ol {
     position: relative;
