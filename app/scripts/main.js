@@ -1,5 +1,12 @@
 (function() {
-  'use strict';
+  $(document).ready(function() {
+    return $('#tag-line').hover(function() {
+      return $(this).stop().fadeTo("fast", 1);
+    }, function() {
+      return $(this).stop().fadeTo("fast", 0.8);
+    });
+  });
+
   $(document).ready(function() {
     var cl, closeMenu, forward, getParameterByName, highlightMenu, isMenuOpen, loadContent, openMenu, runHistory;
     cl = new CanvasLoader('canvasloader-container');

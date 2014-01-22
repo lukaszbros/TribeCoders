@@ -1,5 +1,3 @@
-'use strict' 
-
 $(document).ready ->  
   cl = new CanvasLoader('canvasloader-container')
   cl.setColor('#dddddd')
