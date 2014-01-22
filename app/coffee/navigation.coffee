@@ -104,6 +104,16 @@ $(document).ready ->
     
   $('body').on 'click', '.project', ->
     loadContent('portfolio-' + $(@).attr('id') + '.html')
+   
+  $('body').on 'mouseenter', '.divider', ->
+      $(this).stop().fadeTo( "fast" , 1)
+  $('body').on 'mouseleave', '.divider', ->
+      $(this).stop().fadeTo( "fast" , 0.8)
+      
+  $('body').on 'mouseenter', '.divider-revert', ->
+      $(this).stop().fadeTo( "fast" , 0.8)
+  $('body').on 'mouseleave', '.divider-revert', ->
+      $(this).stop().fadeTo( "fast" , 1)
 
   #Load bease page
   #loadContent('about.html')  

@@ -1,13 +1,5 @@
 (function() {
   $(document).ready(function() {
-    return $('.divider').hover(function() {
-      return $(this).stop().fadeTo("fast", 1);
-    }, function() {
-      return $(this).stop().fadeTo("fast", 0.8);
-    });
-  });
-
-  $(document).ready(function() {
     var cl, closeMenu, forward, getParameterByName, highlightMenu, isMenuOpen, loadContent, openMenu, runHistory;
     cl = new CanvasLoader('canvasloader-container');
     cl.setColor('#dddddd');
@@ -133,8 +125,20 @@
       closeMenu();
       return $('#main-background').fadeOut('fast');
     });
-    return $('body').on('click', '.project', function() {
+    $('body').on('click', '.project', function() {
       return loadContent('portfolio-' + $(this).attr('id') + '.html');
+    });
+    $('body').on('mouseenter', '.divider', function() {
+      return $(this).stop().fadeTo("fast", 1);
+    });
+    $('body').on('mouseleave', '.divider', function() {
+      return $(this).stop().fadeTo("fast", 0.8);
+    });
+    $('body').on('mouseenter', '.divider-revert', function() {
+      return $(this).stop().fadeTo("fast", 0.8);
+    });
+    return $('body').on('mouseleave', '.divider-revert', function() {
+      return $(this).stop().fadeTo("fast", 1);
     });
   });
 

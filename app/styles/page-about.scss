@@ -30,9 +30,8 @@
     color: #000000;
   }
   
-  .divider {
+  .divider-revert {
     text-align:center;
-    @include opacity(0.8);
     hr {
       margin-top: 2px;
       margin-bottom: -1px;

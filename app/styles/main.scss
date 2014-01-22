@@ -73,6 +73,14 @@ a {
   border-top: 8px solid #fff;
 }
 
+.divider {
+    @include opacity(0.8);
+}
+
+.divider-revert {
+    @include opacity(1);
+}
+
 /* Menu */
 #menu {
   z-index:2;
