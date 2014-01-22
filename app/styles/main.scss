@@ -73,11 +73,11 @@ a {
   border-top: 8px solid #fff;
 }
 
-.divider {
+.opacity-hover {
     @include opacity(0.8);
 }
 
-.divider-revert {
+.opacity-hover-revert {
     @include opacity(1);
 }
 
@@ -111,8 +111,7 @@ a {
     display:block;
     position: relative;
     top: 29%;    
-    left: 75px;
-    @include opacity(1);    
+    left: 75px;    
   }
   
   ol {

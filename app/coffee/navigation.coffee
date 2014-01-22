@@ -82,13 +82,13 @@ $(document).ready ->
     closeMenu()
     $('#main-background').fadeIn 'fast'
    
-  $('body').on 'mouseenter', '.divider', ->
+  $('body').on 'mouseenter', '.opacity-hover', ->
       $(this).stop().fadeTo( "fast" , 1)
-  $('body').on 'mouseleave', '.divider', ->
+  $('body').on 'mouseleave', '.opacity-hover', ->
       $(this).stop().fadeTo( "fast" , 0.8)
       
-  $('body').on 'mouseenter', '.divider-revert', ->
-      $(this).stop().fadeTo( "fast" , 0.8)
-  $('body').on 'mouseleave', '.divider-revert', ->
+  $('body').on 'mouseenter', '.opacity-hover-revert', ->
+      $(this).stop().fadeTo( "fast" , 0.7)
+  $('body').on 'mouseleave', '.opacity-hover-revert', ->
       $(this).stop().fadeTo( "fast" , 1)
 

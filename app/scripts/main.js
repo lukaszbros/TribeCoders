@@ -104,16 +104,16 @@
       closeMenu();
       return $('#main-background').fadeIn('fast');
     });
-    $('body').on('mouseenter', '.divider', function() {
+    $('body').on('mouseenter', '.opacity-hover', function() {
       return $(this).stop().fadeTo("fast", 1);
     });
-    $('body').on('mouseleave', '.divider', function() {
+    $('body').on('mouseleave', '.opacity-hover', function() {
       return $(this).stop().fadeTo("fast", 0.8);
     });
-    $('body').on('mouseenter', '.divider-revert', function() {
-      return $(this).stop().fadeTo("fast", 0.8);
+    $('body').on('mouseenter', '.opacity-hover-revert', function() {
+      return $(this).stop().fadeTo("fast", 0.7);
     });
-    return $('body').on('mouseleave', '.divider-revert', function() {
+    return $('body').on('mouseleave', '.opacity-hover-revert', function() {
       return $(this).stop().fadeTo("fast", 1);
     });
   });
