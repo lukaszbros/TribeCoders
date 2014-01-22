@@ -1,6 +1,6 @@
 (function() {
   $(document).ready(function() {
-    return $('#tag-line').hover(function() {
+    return $('.divider').hover(function() {
       return $(this).stop().fadeTo("fast", 1);
     }, function() {
       return $(this).stop().fadeTo("fast", 0.8);

@@ -1,4 +1,5 @@
 @import "config";
+@import "compass/css3/opacity";
 
 #about-header-background {
   background-image: image-url('background-main.jpg');
@@ -13,6 +14,7 @@
     color: #ffffff;
     font-size: 2.5em;
     font-family: "chaparral-pro";
+    font-style: italic;
     hr {
       width: 30px;
     }
@@ -30,6 +32,7 @@
   
   .divider {
     text-align:center;
+    @include opacity(0.8);
     hr {
       margin-top: 2px;
       margin-bottom: -1px;
