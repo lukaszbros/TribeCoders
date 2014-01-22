@@ -81,6 +81,12 @@ a {
     @include opacity(1);
 }
 
+#canvasLoader {
+  margin: auto;
+  width: 200px;
+  margin-top: 50px;
+}
+
 /* Menu */
 #menu {
   z-index:2;
