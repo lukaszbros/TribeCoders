@@ -9,9 +9,6 @@
   height: 250px;
   
   #motto {
-    margin:auto;
-    width: 600px;
-    margin-top: 40px;
     text-align: center;
     color: #ffffff;
     font-size: 2.5em;
@@ -107,9 +104,10 @@
 
 #about-footer-background {
   background-image: image-url('background-about-footer.jpg');
+  background-size: cover;
   position: relative;
   margin: 0 auto;
-  height: 1000px;
+  min-height: 1000px;
   
   #footer-text {
     font-size: 4em;
