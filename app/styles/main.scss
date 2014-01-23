@@ -140,3 +140,35 @@ a {
     }
   }
 }
+
+/* Footer */
+footer {
+  .row {
+    margin-top: 40px;
+    margin-botom: 40px;
+  }
+  background-color: #000000;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    li {
+     display: inline-block;
+     a {
+      text-decoration: none;
+      padding: 0 1em;
+      display: block;
+      color: #ffffff;
+    }
+    .contact {
+      color: $color-base-font;
+      &:hover {
+        color: $color-base-font-hover;
+      }
+    }
+   }
+  }
+  #tribecoders {
+    text-align:right;
+  }
+}

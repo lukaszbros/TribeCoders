@@ -40,14 +40,24 @@
           if ((typeof _gaq !== "undefined" && _gaq !== null)) {
             _gaq.push(['_trackPageview', address]);
           }
-          return $('footer').fadeIn('fast');
+          if (address === 'base.html') {
+            return $('#main-background').fadeIn('fast', function() {});
+          } else {
+            return $('footer').fadeIn('fast');
+          }
         });
       });
     };
     runHistory();
     forward = getParameterByName('forward');
     if (forward && forward !== '') {
-      $('#main-background').fadeOut('fast');
+      if (forward === 'base.html') {
+        $('#main-background').fadeIn('fast');
+        $('footer').fadeOut('fast');
+      } else {
+        $('#main-background').fadeOut('fast');
+        $('footer').fadeIn('fast');
+      }
       History.pushState(null, null, forward);
     }
     loadContent = function(address) {
@@ -57,10 +67,21 @@
       if (urlArray[urlArray.length - 1] === address) {
         return;
       }
-      return $('#main_content').fadeOut('fast', function() {
-        cl.show();
-        return History.pushState(null, null, address);
-      });
+      console.log(address);
+      if (address === 'base.html') {
+        $('footer').fadeOut('fast', function() {});
+        return $('#main_content').fadeOut('fast', function() {
+          cl.show();
+          return History.pushState(null, null, address);
+        });
+      } else {
+        return $('#main-background').fadeOut('fast', function() {
+          return $('#main_content').fadeOut('fast', function() {
+            cl.show();
+            return History.pushState(null, null, address);
+          });
+        });
+      }
     };
     isMenuOpen = false;
     openMenu = function() {
@@ -94,15 +115,7 @@
       event.preventDefault();
       href = $(this).attr('href');
       loadContent(href);
-      closeMenu();
-      return $('#main-background').fadeOut('fast');
-    });
-    $('body').on('click', '#index-logo', function(event) {
-      History.pushState(null, null, 'base.html');
-      $('#main_content').fadeOut('fast');
-      event.preventDefault();
-      closeMenu();
-      return $('#main-background').fadeIn('fast');
+      return closeMenu();
     });
     $('body').on('mouseenter', '.opacity-hover', function() {
       return $(this).stop().fadeTo("fast", 1);

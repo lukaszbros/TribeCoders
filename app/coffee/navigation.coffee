@@ -30,14 +30,22 @@ $(document).ready ->
         urlArray = state.url.split('/')
         address = urlArray[urlArray.length-1]
         if (_gaq?)
-          _gaq.push(['_trackPageview', address])     
-        $('footer').fadeIn 'fast'
+          _gaq.push(['_trackPageview', address])
+        if (address == 'base.html')
+          $('#main-background').fadeIn 'fast', ->
+        else          
+          $('footer').fadeIn 'fast'     
       
   runHistory()
   
   forward = getParameterByName('forward')
   if (forward && forward != '')
-    $('#main-background').fadeOut 'fast'
+    if (forward=='base.html')
+      $('#main-background').fadeIn 'fast'
+      $('footer').fadeOut 'fast'
+    else
+      $('#main-background').fadeOut 'fast'
+      $('footer').fadeIn 'fast'
     History.pushState(null, null, forward)
     
   #Load page animation function
@@ -45,10 +53,18 @@ $(document).ready ->
     state = History.getState()
     urlArray = state.url.split('/')
     if (urlArray[urlArray.length-1] == address) 
-      return;      
-    $('#main_content').fadeOut 'fast', ->
-      cl.show()
-      History.pushState(null,null,address)
+      return;
+    console.log(address);
+    if (address == 'base.html')      
+        $('footer').fadeOut 'fast', ->
+        $('#main_content').fadeOut 'fast', ->
+          cl.show()                
+          History.pushState(null,null,address)
+    else       
+      $('#main-background').fadeOut 'fast', ->        
+        $('#main_content').fadeOut 'fast', ->
+          cl.show()
+          History.pushState(null,null,address)
           
   isMenuOpen = false;
   openMenu = () ->
@@ -72,15 +88,7 @@ $(document).ready ->
     event.preventDefault()
     href = $(@).attr('href')
     loadContent(href)
-    closeMenu()
-    $('#main-background').fadeOut 'fast'
-    
-  $('body').on 'click', '#index-logo', (event) ->
-    History.pushState(null,null,'base.html')
-    $('#main_content').fadeOut 'fast'
-    event.preventDefault()
-    closeMenu()
-    $('#main-background').fadeIn 'fast'
+    closeMenu()      
    
   $('body').on 'mouseenter', '.opacity-hover', ->
       $(this).stop().fadeTo( "fast" , 1)
