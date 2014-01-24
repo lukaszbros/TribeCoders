@@ -48,32 +48,6 @@
   }
   .content {
     //display:none;
-    
-    text-align: center;
-    
-    .title {
-      font-size: 2.5em;
-      font-family: "chaparral-pro";
-      font-style: italic;
-    }
-    hr {
-      width: 30px;
-    }
-    .description {
-      text-align: left;
-      font-size: 1.3em;
-      font-family: "chaparral-pro";
-    }
-    
-    .divider {
-      hr {
-        width: 80px; 
-        border-color: $service-web-apps-divider-color;
-      }
-      .arrow-down {
-        border-top-color:  $service-web-apps-divider-color;
-      }
-    }
   }
   
   #web-apps {
@@ -119,6 +93,20 @@
       border-top-color: $service-mobile-apps-color;
     }
     .content {
+      img {
+        margin: 0 50px 0 50px;
+      }
+      #description {
+        margin-top: 30px;
+        font-size: 1.3em;
+        font-family: "chaparral-pro";
+        
+      }
+      #applications {
+        font-size: 2.2em;
+        font-family: "chaparral-pro";
+        font-style: italic;
+      }
       .divider {
         hr {
           width: 80px; 
