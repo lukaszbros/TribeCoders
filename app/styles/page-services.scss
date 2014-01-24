@@ -47,7 +47,33 @@
     top: 16px;
   }
   .content {
-    display:none;
+    //display:none;
+    
+    text-align: center;
+    
+    .title {
+      font-size: 2.5em;
+      font-family: "chaparral-pro";
+      font-style: italic;
+    }
+    hr {
+      width: 30px;
+    }
+    .description {
+      text-align: left;
+      font-size: 1.3em;
+      font-family: "chaparral-pro";
+    }
+    
+    .divider {
+      hr {
+        width: 80px; 
+        border-color: $service-web-apps-divider-color;
+      }
+      .arrow-down {
+        border-top-color:  $service-web-apps-divider-color;
+      }
+    }
   }
   
   #web-apps {
@@ -57,6 +83,33 @@
     .services-separator {
       border-top-color: $service-web-apps-color;
     }
+    .content {
+      text-align: center;
+    
+      .title {
+        font-size: 2.5em;
+        font-family: "chaparral-pro";
+        font-style: italic;
+      }
+      hr {
+        width: 30px;
+      }
+      .description {
+        text-align: left;
+        font-size: 1.3em;
+        font-family: "chaparral-pro";
+      }
+      
+      .divider {
+        hr {
+          width: 80px; 
+          border-color: $service-web-apps-divider-color;
+        }
+        .arrow-down {
+          border-top-color:  $service-web-apps-divider-color;
+        }
+      }
+    }
   }
   #mobile-apps {
     .service {
@@ -64,6 +117,17 @@
     }
     .services-separator {
       border-top-color: $service-mobile-apps-color;
+    }
+    .content {
+      .divider {
+        hr {
+          width: 80px; 
+          border-color: $service-mobile-apps-divider-color;
+        }
+        .arrow-down {
+          border-top-color: $service-mobile-apps-divider-color;
+        }
+      }
     }
   }
   #outsourcing {

@@ -81,6 +81,21 @@ a {
   border-top: 16px solid #fff;
 }
 
+.divider {
+    text-align:center;
+    hr {
+      margin-top: 2px;
+      margin-bottom: -1px;
+      display: block; height: 1px;
+      border: 0; border-top: 1px solid $about-base-color;      
+      width: 80px; 
+    }
+    .arrow-down {
+      border-top-color: $about-base-color;
+      margin: auto;
+    }
+  }
+
 .opacity-hover {
     @include opacity(0.8);
 }
