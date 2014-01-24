@@ -1,22 +1,73 @@
 @import "config";
 
 #services {
-  .service {
-    height:30%;
+  .service {    
+    color: #ffffff;
+    
+    .row {
+      height: 150px;
+      
+      .service-type {
+        text-align: center;
+        font-size: 3em;
+      }
+      a {
+        display: block;
+      }
+      .more {
+        display: block;
+        padding-top: 30px;
+        font-size: 0.4em;
+        font-family: "chaparral-pro";
+        font-style: italic;
+        color: #ffffff;
+      }
+      hr {
+        margin-top: 10px;
+        margin-bottom: -1px;
+        display: block; height: 1px;
+        width: 400px;
+      } 
+      .arrow-down {
+        margin: auto;
+      }
+      
+      .service-logo {
+        text-align: right;
+        img {
+          margin-top: 44px;
+        }
+      }           
+    }
   }
+  .services-separator {
+    margin: auto;
+    position: relative;
+    top: 16px;
+  }
+  
   #web-apps {
     .service {
       background-color: $service-web-apps-color;
+    }
+    .services-separator {
+      border-top-color: $service-web-apps-color;
     }
   }
   #mobile-apps {
     .service {
       background-color: $service-mobile-apps-color;
     }
+    .services-separator {
+      border-top-color: $service-mobile-apps-color;
+    }
   }
   #outsourcing {
     .service {
       background-color: $service-outsourcing-color;
+    }
+    .services-separator {
+      border-top-color: $service-outsourcing-color;
     }   
   }
 }
