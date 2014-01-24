@@ -131,6 +131,25 @@
     });
   });
 
+  $(document).ready(function() {
+    var open;
+    open = false;
+    return $('body').on('click', '.more', function(event) {
+      return $('.content').animate({
+        height: 'toggle',
+        opacity: 'toggle'
+      }, 'slow', function() {
+        if (open) {
+          open = false;
+          return $('.more span').text('more');
+        } else {
+          open = true;
+          return $('.more span').text('less');
+        }
+      });
+    });
+  });
+
 }).call(this);
 
 //# sourceMappingURL=../../app/maps/main.js.map
