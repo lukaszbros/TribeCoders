@@ -105,12 +105,14 @@
         margin-top: 30px;
         font-size: 1.3em;
         font-family: "chaparral-pro";
-        
       }
       #applications {
         font-size: 2.2em;
         font-family: "chaparral-pro";
         font-style: italic;
+      }
+      span {
+        color: $service-mobile-apps-color;
       }
       .divider {
         hr {
