@@ -1,0 +1,22 @@
+@import "config";
+
+#services {
+  .service {
+    height:30%;
+  }
+  #web-apps {
+    .service {
+      background-color: $service-web-apps-color;
+    }
+  }
+  #mobile-apps {
+    .service {
+      background-color: $service-mobile-apps-color;
+    }
+  }
+  #outsourcing {
+    .service {
+      background-color: $service-outsourcing-color;
+    }   
+  }
+}
