@@ -1,11 +1,7 @@
 @import "config";
 
 #methodology {
-  #why {  
-    .title {
-      text-align: center;
-      font-size: 3em;
-    }
+  #why {      
     #project-management {
       font-size: 2em;
       font-family: "chaparral-pro";
@@ -18,10 +14,6 @@
   }
   
   #work {
-    .title {
-      text-align: center;
-      font-size: 3em;
-    }
     #background-7-steps {
       background-image: image-url('background-methodology.jpg');
       background-position: center bottom;
