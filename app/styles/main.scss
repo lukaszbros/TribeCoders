@@ -23,6 +23,16 @@ a {
     }
 }
 
+hr {
+  display: block; height: 1px;
+  border: 0; border-top: 1px solid $about-base-color;
+}
+.short-hr {
+  width: 30px;
+  position: relative;
+  top: 10px;
+}
+
 .row {
   margin-top: 50px;
   margin-bottom: 50px;
