@@ -58,6 +58,7 @@
   }
   
   #testimonials {
+    margin-bottom: 20px;
     .testimonial{      
       font-family: "chaparral-pro";
       font-size: 1.2em;      
@@ -83,7 +84,6 @@
       background-color: $service-outsourcing-color;
       height: 250px;
       padding-top: 40px;
-      margin-top: 20px;
     }
     #hire-us {
       font-size: 3em;
@@ -99,11 +99,67 @@
       padding: 10px 20px;
       line-height: 4em;
       font-family: "chaparral-pro";
-      font-style: italic;
       &:hover {
         color: $color-base-font-hover;
         border-color: $color-base-font-hover;
       }
     }   
+  }
+  
+  #project
+  {
+    /* Headers for diferent projects */
+    #racinglife-background {
+      background-image: image-url('portfolio/racinglife-top.png');    
+    }
+    
+    .portfolio-header-background{
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 295px;
+    }
+    
+    #description {
+      font-family: "chaparral-pro";
+      font-size: 1.2em;
+    }
+    #title {
+      span {
+        font-size: 2em;
+      }
+      hr {
+        margin-top: 0px;
+        border-color: #000000;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 15px;      
+        li {
+          list-style: none;
+          font-family: "chaparral-pro";
+          font-style: italic;
+          color: $about-base-color;
+        }
+      }
+      a {
+        color: #000000;      
+        border: 2px solid #000000;
+        padding: 10px 20px;
+        line-height: 4em;
+        font-family: "chaparral-pro";
+        &:hover {
+          color: $about-base-color;
+          border-color: $about-base-color;
+        }
+      }
+    }
+    .screenshot {
+      img {
+        max-width: 100%;
+        padding: 10px 0;
+      }
+    }  
   }
 }
