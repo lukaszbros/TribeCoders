@@ -1,6 +1,7 @@
 @import "config";
 
 #portfolio {
+  
   #selector {
     text-align:center;
     hr  {
@@ -54,5 +55,55 @@
         }
       }
     }
+  }
+  
+  #testimonials {
+    .testimonial{      
+      font-family: "chaparral-pro";
+      font-size: 1.2em;      
+      text-align: center;
+      .name {      
+        font-style: italic;
+        font-size: 2.4em;
+        color: $about-base-color;  
+      }
+      .position {
+        font-style: italic;  
+        color: $about-base-color;        
+      }
+      .testimonial-text {
+        padding-top: 10px;
+        text-align: left;
+      }
+    }
+  }
+  
+  #help {
+    .help-background {
+      background-color: $service-outsourcing-color;
+      height: 250px;
+      padding-top: 40px;
+      margin-top: 20px;
+    }
+    #hire-us {
+      font-size: 3em;
+      color: $color-base-font;
+      text-align: center;  
+      span {
+        color: $service-outsourcing-color;
+      }
+    }
+    a {
+      color: $color-base-font;      
+      border: 2px solid $color-base-font;
+      padding: 10px 20px;
+      line-height: 4em;
+      font-family: "chaparral-pro";
+      font-style: italic;
+      &:hover {
+        color: $color-base-font-hover;
+        border-color: $color-base-font-hover;
+      }
+    }   
   }
 }
