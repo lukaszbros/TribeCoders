@@ -112,6 +112,18 @@
     #racinglife-background {
       background-image: image-url('portfolio/racinglife-top.png');    
     }
+    #mgmt-background {
+      background-image: image-url('portfolio/mgmt-top.png');    
+    }
+    #facets-background {
+      background-image: image-url('portfolio/facets-top.png');    
+    }
+    #pavegen-background {
+      background-image: image-url('portfolio/pavegen-top.png');    
+    }
+    #everydayiplay-background {
+      background-image: image-url('portfolio/everydayiplay-top.png');    
+    }
     
     .portfolio-header-background{
       background-size: cover;
@@ -156,6 +168,7 @@
       }
     }
     .screenshot {
+      text-align: center;
       img {
         max-width: 100%;
         padding: 10px 0;
