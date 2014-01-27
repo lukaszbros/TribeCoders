@@ -132,6 +132,46 @@
   });
 
   $(document).ready(function() {
+    $("body").on("click", ".select", function(event) {
+      var id;
+      event.preventDefault();
+      id = $(this).attr('id');
+      console.log(id);
+      switch (id) {
+        case "all":
+          $(".blackandwhite").stop().fadeTo("fast", 0.01);
+          return $("#selector .arrow-down").animate({
+            left: "-150px"
+          });
+        case "web":
+          $(".blackandwhite").stop().fadeTo("fast", 1);
+          $(".web").stop().fadeTo("fast", 0.01);
+          return $("#selector .arrow-down").animate({
+            left: "-50px"
+          });
+        case "mobile":
+          $(".blackandwhite").stop().fadeTo("fast", 1);
+          $(".mobile").stop().fadeTo("fast", 0.01);
+          return $("#selector .arrow-down").animate({
+            left: "50px"
+          });
+        case "design":
+          $(".blackandwhite").stop().fadeTo("fast", 1);
+          $(".design").stop().fadeTo("fast", 0.01);
+          return $("#selector .arrow-down").animate({
+            left: "150px"
+          });
+      }
+    });
+    $("body").on("mouseenter", "#projects img", function() {
+      return $(this).stop().fadeTo("fast", 0.01);
+    });
+    return $("body").on("mouseleave", "#projects img", function() {
+      return $(this).stop().fadeTo("fast", 1);
+    });
+  });
+
+  $(document).ready(function() {
     var open;
     open = false;
     return $('body').on('click', '.more', function(event) {
