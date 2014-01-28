@@ -28,13 +28,19 @@ $(document).ready ->
         cl.hide()
         $(@).fadeIn('fast')      
         urlArray = state.url.split('/')
-        address = urlArray[urlArray.length-1]
+        address = urlArray[urlArray.length-1]        
         if (_gaq?)
           _gaq.push(['_trackPageview', address])
+        
         if (address == 'base.html')
           $('#main-background').fadeIn 'fast', ->
-        else          
-          $('footer').fadeIn 'fast'     
+        else
+          $('footer').fadeIn 'fast'          
+          pageName = address.substring(0, address.indexOf('.'))
+          $('#menu a').removeClass('selected')    
+          $('footer a').removeClass('selected')  
+          $('#left-menu-'+pageName).addClass('selected')
+          $('#footer-menu-'+pageName).addClass('selected')     
       
   runHistory()
   
@@ -54,7 +60,6 @@ $(document).ready ->
     urlArray = state.url.split('/')
     if (urlArray[urlArray.length-1] == address) 
       return;
-    console.log(address);
     if (address == 'base.html')      
         $('footer').fadeOut 'fast', ->
         $('#main_content').fadeOut 'fast', ->
@@ -86,7 +91,7 @@ $(document).ready ->
   #All links
   $('body').on 'click', 'a:not(.direct)', (event) ->
     event.preventDefault()
-    href = $(@).attr('href')
+    href = $(@).attr('href')    
     loadContent(href)
     closeMenu()      
    

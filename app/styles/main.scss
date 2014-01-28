@@ -195,6 +195,12 @@ hr {
       font-family: Novecentosanswide-Bold;
       font-size: 1.3em;  
     }
+    .selected {
+      color: $color-base-font-hover;
+      &:hover {
+        color: $color-base-font-hover;
+      }
+    }
   }
 }
 
@@ -218,7 +224,7 @@ footer {
       display: block;
       color: #ffffff;
     }
-    .contact {
+    .selected {
       color: $color-base-font;
       &:hover {
         color: $color-base-font-hover;
@@ -228,5 +234,8 @@ footer {
   }
   #tribecoders {
     text-align:right;
+    span {
+      color: #ffffff;
+    }
   }
 }
