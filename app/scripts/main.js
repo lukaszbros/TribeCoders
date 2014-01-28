@@ -176,19 +176,49 @@
   });
 
   $(document).ready(function() {
-    var open;
-    open = false;
-    return $('body').on('click', '.more', function(event) {
-      return $('.content').animate({
+    var openMobile, openOutsourcing, openWeb;
+    openWeb = false;
+    openMobile = false;
+    openOutsourcing = false;
+    $('body').on('click', '.more-web', function(event) {
+      return $('.content-web').animate({
         height: 'toggle',
         opacity: 'toggle'
       }, 'slow', function() {
-        if (open) {
-          open = false;
-          return $('.more span').text('more');
+        if (openWeb) {
+          openWeb = false;
+          return $('.more-web span').text('more');
         } else {
-          open = true;
-          return $('.more span').text('less');
+          openWeb = true;
+          return $('.more-web span').text('less');
+        }
+      });
+    });
+    $('body').on('click', '.more-mobile', function(event) {
+      return $('.content-mobile').animate({
+        height: 'toggle',
+        opacity: 'toggle'
+      }, 'slow', function() {
+        if (openMobile) {
+          openMobile = false;
+          return $('.more-mobile span').text('more');
+        } else {
+          openMobile = true;
+          return $('.more-mobile span').text('less');
+        }
+      });
+    });
+    return $('body').on('click', '.more-outsourcing', function(event) {
+      return $('.content-outsourcing').animate({
+        height: 'toggle',
+        opacity: 'toggle'
+      }, 'slow', function() {
+        if (openOutsourcing) {
+          openOutsourcing = false;
+          return $('.more-outsourcing span').text('more');
+        } else {
+          openOutsourcing = true;
+          return $('.more-outsourcing span').text('less');
         }
       });
     });
