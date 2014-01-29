@@ -49,11 +49,13 @@ hr {
   font-weight: normal;
   font-style: normal;
 }
+
 .Novecentosanswide-Book { 
   font-family: Novecentosanswide-Book;
   font-weight: normal;
   font-style: normal;
 }
+/*
 .Novecentosanswide-DemiBold { 
   font-family: Novecentosanswide-DemiBold;
   font-weight: normal;
@@ -68,7 +70,7 @@ hr {
   font-family: Novecentosanswide-Medium;
   font-weight: normal;
   font-style: normal;
-}
+}*/
 .Novecentosanswide-Normal { 
   font-family: Novecentosanswide-Normal;
   font-weight: normal;
@@ -157,16 +159,15 @@ hr {
     &:before {
       content: "";
       position: absolute;
-      left: 2px;
-      top: 0.3em;
-      width: 1em;
-      height: 0.15em;
-      background: $color-base-font;
-      box-shadow: 0 0.35em 0 0 $color-base-font, 0 0.7em 0 0 $color-base-font;
+      top: 10px;
+      left: 0;
+      border-bottom: 18px double $color-base-font;
+      border-top: 6px solid $color-base-font;
+      height: 30px;
+      width: 36px;
     }
     &:hover:before {
-      background: $color-base-font-hover;
-      box-shadow: 0 0.35em 0 0 $color-base-font-hover, 0 0.7em 0 0 $color-base-font-hover;
+      border-color: $color-base-font-hover;      
     }
   }  
 

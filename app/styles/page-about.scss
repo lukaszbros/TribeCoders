@@ -115,6 +115,9 @@
       font-size: 4em;
       text-transform: uppercase;
       color: #ffffff;
+      @media screen and (max-width: $mobile-break) {
+        font-size: 3em;
+      }
     }
     .row {
       margin-top: 300px;
