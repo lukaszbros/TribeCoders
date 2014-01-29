@@ -32,11 +32,41 @@
           &:hover {
             color: $about-base-color;
           }
-        }   
+        }
       }
     }
   }
-
+  
+  .facets-img{
+    @include image-div('portfolio/facets');
+  }
+  .facets-color-img{
+    @include image-div('portfolio/facets-color');
+  }
+  .everydayiplay-img{
+    @include image-div('portfolio/everydayiplay');
+  }
+  .everydayiplay-color-img{
+    @include image-div('portfolio/everydayiplay-color');
+  }
+  .racinglife-img{
+    @include image-div('portfolio/racinglife');
+  }
+  .racinglife-color-img{
+    @include image-div('portfolio/racinglife-color');
+  }
+  .mgmt-img{
+    @include image-div('portfolio/mgmt');
+  }
+  .mgmt-color-img{
+    @include image-div('portfolio/mgmt-color');
+  }
+  .pavegen-img{
+    @include image-div('portfolio/pavegen');
+  }
+  .pavegen-color-img{
+    @include image-div('portfolio/pavegen-color');
+  }
 
   #projects {
     ul{
@@ -53,8 +83,10 @@
           width: 100%;
           float: none;
         }
-        img {      
-          width: 100%;  
+        div{
+          @media screen and (max-width: $mobile-break) {
+            background-size: cover;
+          } 
         }
         .blackandwhite{
           position: absolute;
@@ -123,19 +155,34 @@
   {
     /* Headers for diferent projects */
     #racinglife-background {
-      background-image: image-url('portfolio/racinglife-top.png');    
+      background-image: image-url('portfolio/racinglife-top.png');
+      @media screen and (max-width: $mobile-break) {
+        background-image: image-url('portfolio/racinglife@2x.png');
+      }    
     }
     #mgmt-background {
-      background-image: image-url('portfolio/mgmt-top.png');    
+      background-image: image-url('portfolio/mgmt-top.png');  
+      @media screen and (max-width: $mobile-break) {
+        background-image: image-url('portfolio/mgmt@2x.png');
+      }    
     }
     #facets-background {
-      background-image: image-url('portfolio/facets-top.png');    
+      background-image: image-url('portfolio/facets-top.png');
+      @media screen and (max-width: $mobile-break) {
+        background-image: image-url('portfolio/facets@2x.png');
+      }      
     }
     #pavegen-background {
-      background-image: image-url('portfolio/pavegen-top.png');    
+      background-image: image-url('portfolio/pavegen-top.png');
+      @media screen and (max-width: $mobile-break) {
+        background-image: image-url('portfolio/pavegen@2x.png');
+      }      
     }
     #everydayiplay-background {
-      background-image: image-url('portfolio/everydayiplay-top.png');    
+      background-image: image-url('portfolio/everydayiplay-top.png');
+      @media screen and (max-width: $mobile-break) {
+        background-image: image-url('portfolio/everydayiplay@2x.png');
+      }      
     }
     
     .portfolio-header-background{

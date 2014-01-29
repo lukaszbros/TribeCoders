@@ -170,10 +170,10 @@
           });
       }
     });
-    $("body").on("mouseenter", "#projects img", function() {
+    $("body").on("mouseenter", ".blackandwhite", function() {
       return $(this).stop().fadeTo("fast", 0.01);
     });
-    return $("body").on("mouseleave", "#projects img", function() {
+    return $("body").on("mouseleave", ".blackandwhite", function() {
       return $(this).stop().fadeTo("fast", 1);
     });
   });

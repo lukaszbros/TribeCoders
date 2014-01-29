@@ -23,8 +23,8 @@ $(document).ready ->
         $("#selector .arrow-down").animate ({left:"150px"})            
   
   #Saturation and desaturation of portfolio  
-  $("body").on "mouseenter", "#projects img", ->
+  $("body").on "mouseenter", ".blackandwhite", ->
     $(this).stop().fadeTo( "fast" , 0.01)
-  $("body").on "mouseleave", "#projects img", ->
+  $("body").on "mouseleave", ".blackandwhite", ->
     $(this).stop().fadeTo( "fast" , 1) 
     
