@@ -1,4 +1,6 @@
 $(document).ready ->  
+  title = "TribeCoders apps you need";
+  
   cl = new CanvasLoader('canvasloader-container')
   cl.setColor('#dddddd')
   cl.setShape('spiral')
@@ -22,7 +24,7 @@ $(document).ready ->
       state = History.getState()
       forward = getParameterByName('forward')
       if (forward && forward != '')
-        History.pushState(null, null, forward)
+        History.pushState(null, title, forward)
         return;  
       $('#main_content').load state.url, ->
         cl.hide()
@@ -31,7 +33,7 @@ $(document).ready ->
         address = urlArray[urlArray.length-1]        
         if (_gaq?)
           _gaq.push(['_trackPageview', address])
-        
+        document.title = title;
         if (address == 'base.html')
           $('#main-background').fadeIn 'fast', ->
             $('#menu a').removeClass('selected')    
@@ -54,7 +56,7 @@ $(document).ready ->
     else
       $('#main-background').fadeOut 'fast'
       $('footer').fadeIn 'fast'
-    History.pushState(null, null, forward)
+    History.pushState(null, title, forward)
     
   #Load page animation function
   loadContent = (address) ->
@@ -66,12 +68,12 @@ $(document).ready ->
         $('footer').fadeOut 'fast', ->
         $('#main_content').fadeOut 'fast', ->
           cl.show()                
-          History.pushState(null,null,address)
+          History.pushState(null,title,address)
     else       
       $('#main-background').fadeOut 'fast', ->        
         $('#main_content').fadeOut 'fast', ->
           cl.show()
-          History.pushState(null,null,address)
+          History.pushState(null,title,address)
           
   isMenuOpen = false;
   openMenu = () ->

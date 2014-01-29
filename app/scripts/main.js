@@ -1,6 +1,7 @@
 (function() {
   $(document).ready(function() {
-    var cl, closeMenu, forward, getParameterByName, isMenuOpen, loadContent, openMenu, runHistory;
+    var cl, closeMenu, forward, getParameterByName, isMenuOpen, loadContent, openMenu, runHistory, title;
+    title = "TribeCoders apps you need";
     cl = new CanvasLoader('canvasloader-container');
     cl.setColor('#dddddd');
     cl.setShape('spiral');
@@ -28,7 +29,7 @@
         state = History.getState();
         forward = getParameterByName('forward');
         if (forward && forward !== '') {
-          History.pushState(null, null, forward);
+          History.pushState(null, title, forward);
           return;
         }
         return $('#main_content').load(state.url, function() {
@@ -40,6 +41,7 @@
           if ((typeof _gaq !== "undefined" && _gaq !== null)) {
             _gaq.push(['_trackPageview', address]);
           }
+          document.title = title;
           if (address === 'base.html') {
             return $('#main-background').fadeIn('fast', function() {
               $('#menu a').removeClass('selected');
@@ -66,7 +68,7 @@
         $('#main-background').fadeOut('fast');
         $('footer').fadeIn('fast');
       }
-      History.pushState(null, null, forward);
+      History.pushState(null, title, forward);
     }
     loadContent = function(address) {
       var state, urlArray;
@@ -79,13 +81,13 @@
         $('footer').fadeOut('fast', function() {});
         return $('#main_content').fadeOut('fast', function() {
           cl.show();
-          return History.pushState(null, null, address);
+          return History.pushState(null, title, address);
         });
       } else {
         return $('#main-background').fadeOut('fast', function() {
           return $('#main_content').fadeOut('fast', function() {
             cl.show();
-            return History.pushState(null, null, address);
+            return History.pushState(null, title, address);
           });
         });
       }
