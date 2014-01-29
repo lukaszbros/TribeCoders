@@ -98,6 +98,8 @@ hr {
 
 .divider {
     text-align:center;
+    display: block;
+    width:100%;
     hr {
       margin-top: 2px;
       margin-bottom: -1px;
@@ -144,6 +146,9 @@ hr {
     width: 40px;
     background-color: $color-menu-background;
     font-size: 2.5em;
+    @media screen and (max-width: $menu-break) {
+      top: 0;
+    }
   }
   
   .box-shadow-menu {
@@ -169,7 +174,10 @@ hr {
     display:block;
     position: relative;
     top: 29%;    
-    left: 75px;    
+    left: 75px;   
+    @media screen and (max-width: $menu-break) {
+     top: 19%;
+    } 
   }
   
   ol {
@@ -178,6 +186,9 @@ hr {
     color: #ffffff;
     counter-reset: item;
     list-style-type: none;
+    @media screen and (max-width: $menu-break) {
+      top: 20%;
+    }
     
     li {
       margin-top: 1.3em;
@@ -207,6 +218,9 @@ hr {
 /* Footer */
 footer {
   position:relative;
+  @media screen and (max-width: $footer-break) {
+    text-align:center;
+  }
   .row {
     margin-top: 40px;
     margin-botom: 40px;
@@ -220,7 +234,7 @@ footer {
      display: inline-block;
      a {
       text-decoration: none;
-      padding: 0 1em;
+      padding: 1em 1em;
       display: block;
       color: #ffffff;
     }
@@ -233,7 +247,10 @@ footer {
    }
   }
   #tribecoders {
-    text-align:right;
+    padding: 1em 1em;
+    @media screen and (min-width: $footer-break) {
+      text-align:right;
+    }
     span {
       color: #ffffff;
     }

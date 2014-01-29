@@ -41,7 +41,10 @@
             _gaq.push(['_trackPageview', address]);
           }
           if (address === 'base.html') {
-            return $('#main-background').fadeIn('fast', function() {});
+            return $('#main-background').fadeIn('fast', function() {
+              $('#menu a').removeClass('selected');
+              return $('footer a').removeClass('selected');
+            });
           } else {
             $('footer').fadeIn('fast');
             pageName = address.substring(0, address.indexOf('.'));

@@ -24,7 +24,7 @@ $(document).ready ->
       if (forward && forward != '')
         History.pushState(null, null, forward)
         return;  
-      $('#main_content').load state.url, ->        
+      $('#main_content').load state.url, ->
         cl.hide()
         $(@).fadeIn('fast')      
         urlArray = state.url.split('/')
@@ -34,13 +34,15 @@ $(document).ready ->
         
         if (address == 'base.html')
           $('#main-background').fadeIn 'fast', ->
+            $('#menu a').removeClass('selected')    
+            $('footer a').removeClass('selected')  
         else
           $('footer').fadeIn 'fast'          
           pageName = address.substring(0, address.indexOf('.'))
           $('#menu a').removeClass('selected')    
           $('footer a').removeClass('selected')  
           $('#left-menu-'+pageName).addClass('selected')
-          $('#footer-menu-'+pageName).addClass('selected')     
+          $('#footer-menu-'+pageName).addClass('selected')
       
   runHistory()
   

@@ -10,7 +10,7 @@
       
       .service-type {
         text-align: center;
-        font-size: 3em;
+        font-size: 2.9em;
       }
       a {
         display: block;
@@ -27,8 +27,11 @@
         margin-top: 10px;
         margin-bottom: -1px;
         display: block; height: 1px;
-        width: 400px;
+        width: 360px;
         border-color: #ffffff;
+        @media screen and (max-width: $mobile-break) {
+          width: 100%;
+        }
       } 
       .arrow-down {
         margin: auto;
@@ -100,18 +103,24 @@
       border-top-color: $service-mobile-apps-color;
     }
     .content {
-      img {
-        margin: 0 50px 0 50px;
-      }
       #description {
-        margin-top: 30px;
-        font-size: 1.3em;
-        font-family: "chaparral-pro";
+        margin-top: 30px;        
+        text-align: center;
+        img {
+          margin: 0 50px 30px 50px;
+        }
+        #technology {
+          font-size: 1.3em;
+          font-family: "chaparral-pro";
+          padding-top: 30px;
+          text-align: left;
+        }
       }
       #applications {
         font-size: 2.2em;
         font-family: "chaparral-pro";
         font-style: italic;
+        padding-top: 30px;
       }
       span {
         color: $service-mobile-apps-color;
@@ -135,12 +144,18 @@
       border-top-color: $service-outsourcing-color;
     }
     .content {
+            
       #hire-us {
         font-size: 2.2em;
         font-family: "chaparral-pro";
         font-style: italic;
         span {
           color: $service-outsourcing-color;
+        }
+      }
+      #get-in-touch {
+        @media screen and (max-width: $footer-break) {
+          padding-top:30px;
         }
       }
       a {

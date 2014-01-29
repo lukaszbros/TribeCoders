@@ -59,6 +59,9 @@
     }
     #technology-title {
       font-size: 3em;
+      @media screen and (max-width: $mobile-break) {
+        font-size: 2.6em;
+      }
       text-align: center;
     }
     span {

@@ -15,6 +15,9 @@
   margin-top: 15%;
   text-align: center;
   color: #ffffff;
+  @media screen and (max-width: $menu-break) {
+    margin-top: 5%;
+  }
   
   #main-company-name {
     padding-top: 30px;
@@ -36,6 +39,12 @@
   font-size: 1.6em;
   font-family: "chaparral-pro";
   font-style: italic;
+  @media screen and (max-width: $menu-break) {
+    margin-top: 7%;
+  }
+  @media screen and (max-width: $mobile-break) {
+    margin-top: 3%;
+  }
   
   &:hover{
     text-decoration:none;

@@ -7,7 +7,7 @@
   background-size: cover;
   position: relative;
   margin: 0 auto;
-  height: 250px;
+  min-height: 250px;
   
   #motto {
     text-align: center;
@@ -33,6 +33,9 @@
   .details {
     text-align: center;
     padding-top: 60px;    
+    @media screen and (max-width: $mobile-break) {
+      padding-top: 105px;  
+    }
     .name {
       color: $about-base-color;
       font-size: 2.5em;
@@ -60,10 +63,27 @@
     }
   }
   
-  .photo {
-    height: 276px;
+  #klaudyna {
+    background-image: image-url('about-klaudyna.png');
+    background: -webkit-image-set(url('/images/about-klaudyna.png') 1x, url('/images/about-klaudyna@2x.png') 2x);
     background-repeat: no-repeat;
     background-position: center;
+  }
+  #lukasz {
+    background-image: image-url('about-lukasz.png');
+    background: -webkit-image-set(url('/images/about-lukasz.png') 1x, url('/images/about-lukasz@2x.png') 2x);
+    background-repeat: no-repeat;
+    background-position: center;
+  }  
+  #michal {
+    background-image: image-url('about-michal.png');
+    background: -webkit-image-set(url('/images/about-michal.png') 1x, url('/images/about-michal@2x.png') 2x);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .photo {
+    height: 276px;    
     .circle {
       position: relative;
       top: 138px;
@@ -76,33 +96,29 @@
       font-size: 1.2em; 
       padding-top: 30px;
       color: #ffffff; 
-    }
-  }
-  #klaudyna {
-    background-image: image-url('about-klaudyna.png');
-  }
-  #lukasz {
-    background-image: image-url('about-lukasz.png');
+      @media screen and (max-width: $mobile-break) {
+        top: 230px;
+        left: 0;
+        margin: auto;
+      }
+    }    
   }  
-  #michal {
-    background-image: image-url('about-michal.png');
-  }
-}
 
-#about-footer-background {
-  background-image: image-url('background-about-footer.jpg');
-  background-size: cover;
-  position: relative;
-  margin: 0 auto;
-  min-height: 1000px;
-  
-  #footer-text {
-    font-size: 4em;
-    text-transform: uppercase;
-    color: #ffffff;
-  }
-  .row {
-    margin-top: 300px;
+  #about-footer-background {
+    background-image: image-url('background-about-footer.jpg');
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+    min-height: 1000px;
+    
+    #footer-text {
+      font-size: 4em;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+    .row {
+      margin-top: 300px;
+    }
   }
 }
 

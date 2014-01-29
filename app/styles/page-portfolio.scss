@@ -4,6 +4,10 @@
   
   #selector {
     text-align:center;
+    @media screen and (max-width: $mobile-break) {
+      display: none;
+    }
+    
     hr  {
       width: 350px;
     }
@@ -45,6 +49,10 @@
         float: left;
         list-style: none;
         position: relative;
+        @media screen and (max-width: $mobile-break) {
+          width: 100%;
+          float: none;
+        }
         img {      
           width: 100%;  
         }
@@ -79,10 +87,10 @@
     }
   }
   
-  #help {
+  #help {    
     .help-background {
       background-color: $service-outsourcing-color;
-      height: 250px;
+      min-height: 250px;
       padding-top: 40px;
     }
     #hire-us {
@@ -91,6 +99,11 @@
       text-align: center;  
       span {
         color: $service-outsourcing-color;
+      }
+    }
+    #get-in-touch {
+      @media screen and (max-width: $footer-break) {
+        text-align:center;
       }
     }
     a {
@@ -135,6 +148,7 @@
     #description {
       font-family: "chaparral-pro";
       font-size: 1.2em;
+      padding-bottom: 20px;
     }
     #title {
       span {
