@@ -134,6 +134,24 @@ hr {
   @include image-div('logo-small-baige');
 }
 
+.social-list{
+  width: 84px;
+  margin: auto;
+} 
+.social {
+  margin: 0 10px;
+  float: left;
+}
+.social-facebook-img{
+  @include image-div('social-facebook');
+}
+.social-twitter-img{
+  @include image-div('social-twitter');
+}
+.social-instagram-img{
+  @include image-div('social-instagram');
+}
+
 .opacity-hover {
     @include opacity(0.8);
 }
@@ -196,8 +214,11 @@ hr {
     top: 29%;    
     left: 75px;   
     @media screen and (max-width: $menu-break) {
-     top: 19%;
+      top: 19%;
     }   
+    @media screen and (max-width: $mobile-break) {
+      top: 10%;
+    } 
   }
   
   ol {
@@ -208,6 +229,9 @@ hr {
     list-style-type: none;
     @media screen and (max-width: $menu-break) {
       top: 20%;
+    }
+    @media screen and (max-width: $mobile-break) {
+      top: 10%;
     }
     
     li {
@@ -231,6 +255,14 @@ hr {
       &:hover {
         color: $color-base-font-hover;
       }
+    }
+  }
+  .social-list {
+    position: absolute;
+    bottom: 50px;
+    left: 50px; 
+    @media screen and (max-height: $main-page-height-break) {
+      bottom: 20px;
     }
   }
 }
