@@ -21,6 +21,10 @@
   @media screen and (max-height: $main-page-height-break) {
     margin-top: 5%;
   }
+  #main-logo-img {
+    @include image-div('logo-main');    
+    margin: auto;
+  }
   
   #main-company-name {
     color: #ffffff;

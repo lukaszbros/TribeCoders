@@ -20,3 +20,16 @@ $menu-break: 800px;
 $mobile-break: 400px;
 
 $main-page-height-break: 600px;
+
+@mixin image-div($imageAddress, $includeMobile:true, $extension:".png") {
+  background-image: image-url($imageAddress + $extension);
+  @if $includeMobile {
+    background-image: -webkit-image-set(image_url($imageAddress + $extension) 1x, image_url($imageAddress + "@2x" + $extension) 2x);
+  }
+  max-width: image-width($imageAddress + $extension);
+  width: 100%;
+    height: image-height($imageAddress + $extension);
+    background-position:center top;
+  background-repeat:no-repeat; 
+  background-size: contain; 
+}
