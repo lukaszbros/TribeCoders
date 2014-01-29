@@ -122,14 +122,17 @@ hr {
   @include image-div('logo-small-white');
 }
 
+.logo-small-grey-img {
+  @include image-div('logo-small-grey');
+}
+
 .logo-small-blue-img {
   @include image-div('logo-small-blue');
 }
 
-.logo-small-beige-img{
+.logo-small-baige-img{
   @include image-div('logo-small-baige');
 }
-
 
 .opacity-hover {
     @include opacity(0.8);

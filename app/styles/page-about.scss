@@ -63,19 +63,6 @@
     }
   }
   
-  #klaudyna {
-    @include image-div('about-klaudyna');
-  }
-  #lukasz {
-    @include image-div('about-lukasz');
-  }  
-  #michal {
-    @include image-div('about-michal');
-  }
-  #nazar {
-    @include image-div('about-nazar');
-  }
-  
   .photo {
     height: 276px;
     margin: auto;    
@@ -117,6 +104,19 @@
     .row {
       margin-top: 300px;
     }
+  }
+  
+  #klaudyna {
+    @include image-div('about-klaudyna');
+  }
+  #lukasz {
+    @include image-div('about-lukasz');
+  }  
+  #michal {
+    @include image-div('about-michal');
+  }
+  #nazar {
+    @include image-div('about-nazar');
   }
 }
 
