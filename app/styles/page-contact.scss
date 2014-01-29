@@ -18,14 +18,15 @@
     .contact-method {
       padding-top: 15px
     }
-    img {
-      padding: 0 10px 0 0;
+    .contact-img {
+      margin: 0 10px 0 0;
+      float: left;
     }
   }
   #map-background {
     background-image: image-url('background-map.jpg');
     background-position: center bottom;
-    background-size: cover;
+    background-size: cover;    
     height: 742px;
   }
   #find-us-background {
@@ -34,9 +35,39 @@
   .find-us {
     color: $color-base-font;
     text-align: center;
-    font-size: 3em;    
-    img {
-      padding: 0 10px;
+    font-size: 3em;   
+    .social-list{
+      width: 84px;
+      margin: auto;
+    } 
+    .social {
+      margin: 0 10px;
+      float: left;
     }
   }
+  
+  .contact-phone-img{
+    @include image-div('contact-phone');
+  }
+  .contact-mail-img{
+    @include image-div('contact-mail');
+  }
+  .contact-time-img{
+    @include image-div('contact-time');
+  }
+  .contact-location-img{
+    @include image-div('contact-location');
+  }
+  
+  .social-facebook-img{
+    @include image-div('social-facebook');
+  }
+  .social-twitter-img{
+    @include image-div('social-twitter');
+  }
+  .social-instagram-img{
+    @include image-div('social-instagram');
+  }
+
+
 }
