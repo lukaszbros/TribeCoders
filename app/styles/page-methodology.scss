@@ -21,9 +21,11 @@
       height: 270px;
       text-align: center;
       margin-bottom: 50px;
-      img {
+      .methodology-7-img {
+        @include image-div('methodology-7');
         position: relative;
         top: 32px;
+        margin: auto;
       }
       span {
         position: relative;
@@ -38,8 +40,9 @@
       font-size: 1.2em;
       margin-bottom: 10px;
       margin-top: 10px;      
-      img {
+      .step-img {
         padding-bottom: 20px;
+        margin: auto;
       }
       .veritcal-divider {
         border: solid 1px $about-base-color;
@@ -75,10 +78,110 @@
       list-style-type: none;
       li {
         height: 50px;
+        line-height: 50px;
       }
     }
-    img {
-      padding-right: 30px;
+    .technology-img {
+      margin-right: 30px;
+      float: left;
     }
+  }
+  
+  .methodology-step1-img{
+    @include image-div('methodology-step1');
+  }
+  .methodology-step2-img{
+    @include image-div('methodology-step2');
+  }
+  .methodology-step3-img{
+    @include image-div('methodology-step3');
+  }
+  .methodology-step4-img{
+    @include image-div('methodology-step4');
+  }
+  .methodology-step5-img{
+    @include image-div('methodology-step5');
+  }
+  .methodology-step6-img{
+    @include image-div('methodology-step6');
+  }
+  .methodology-step7-img{
+    @include image-div('methodology-step7');
+  }
+  
+  .technology-php-img{
+    @include image-div('technology/php');
+  }
+  .technology-ruby-img{
+    @include image-div('technology/ruby');
+  }
+  .technology-javascript-img{
+    @include image-div('technology/javascript');
+  }
+  .technology-coffeescript-img{
+    @include image-div('technology/coffeescript');
+  }
+  .technology-html5-img{
+    @include image-div('technology/html5');
+  }
+  .technology-cpp-img{
+    @include image-div('technology/cpp');
+  }
+  .technology-java-img{
+    @include image-div('technology/java');
+  }
+  .technology-csharp-img{
+    @include image-div('technology/csharp');
+  }
+  .technology-objectivec-img{
+    @include image-div('technology/objectivec');
+  }
+  .technology-nodejs-img{
+    @include image-div('technology/nodejs');
+  }
+  .technology-angular-img{
+    @include image-div('technology/angular');
+  }
+  .technology-rails-img{
+    @include image-div('technology/rails');
+  }
+  .technology-symfony-img{
+    @include image-div('technology/symfony');
+  }
+  .technology-zend-img{
+    @include image-div('technology/zend');
+  }
+  .technology-codeigniter-img{
+    @include image-div('technology/codeigniter');
+  }
+  .technology-phalcon-img{
+    @include image-div('technology/phalcon');
+  }
+  .technology-facebook-img{
+    @include image-div('technology/facebook');
+  }
+  .technology-aspmvc-img{
+    @include image-div('technology/aspmvc');
+  }
+  .technology-mysql-img{
+    @include image-div('technology/mysql');
+  }
+  .technology-postgresql-img{
+    @include image-div('technology/postgresql');
+  }
+  .technology-mongodb-img{
+    @include image-div('technology/mongodb');
+  }
+  .technology-sqlserver-img{
+    @include image-div('technology/sqlserver');
+  }
+  .technology-ios-img{
+    @include image-div('technology/ios');
+  }
+  .technology-android-img{
+    @include image-div('technology/android');
+  }
+  .technology-windows-img{
+    @include image-div('technology/windows');
   }
 }
