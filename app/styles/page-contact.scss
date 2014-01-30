@@ -35,7 +35,10 @@
   .find-us {
     color: $color-base-font;
     text-align: center;
-    font-size: 3em;       
+    font-size: 3em;    
+    .short-hr {
+      top: 0px;
+    }   
   }
   
   .contact-phone-img{
