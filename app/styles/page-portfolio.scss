@@ -1,32 +1,239 @@
-#viewport{
-  width: 100%;
-  height: 249px;
-   /* Defines the size of the visible part of the carousel
-    Attention : if you only want to see plain items in the viewport,
-    the width of the viewport should take into account of :
-    - the items width
-    - the right and left padding of items
-    - the number of items you want to see in the viewport
-   */
-  overflow:hidden; /* Hides extra elements, those outside the viewport area */
-  /* Fix for IE */
-  position:relative;
+@import "config";
+
+#portfolio {
   
-  ul{
-    position: relative; /* Enables positionning of elements inside viewport */
-    padding: 0; /* Resets default - User Agent - style */
-    margin: 0;
-    width: 1685px;
-    li{
-      float: left; /* Places list items side by side*/
-      list-style: none; /* Resets default - User Agent - style */
+  #selector {
+    text-align:center;
+    @media screen and (max-width: $mobile-break) {
+      display: none;
+    }
+    
+    hr  {
+      width: 350px;
+    }
+    .arrow-down {
+      border-top-color: $about-base-color;
+      margin: auto;
+      margin-top: -21px;
+      left: -150px;
+      position: relative;
+    }
+    ul {
+      padding: 0;
+      margin: 10px auto;
+      width: 400px;
+      li { 
+        float: left;
+        list-style: none;
+        display: block;
+        width: 25%;
+        a {
+          color: #000000;
+          &:hover {
+            color: $about-base-color;
+          }
+        }
+      }
     }
   }
-}
+  
+  .facets-img{
+    @include image-div('portfolio/facets');
+  }
+  .facets-color-img{
+    @include image-div('portfolio/facets-color');
+  }
+  .everydayiplay-img{
+    @include image-div('portfolio/everydayiplay');
+  }
+  .everydayiplay-color-img{
+    @include image-div('portfolio/everydayiplay-color');
+  }
+  .racinglife-img{
+    @include image-div('portfolio/racinglife');
+  }
+  .racinglife-color-img{
+    @include image-div('portfolio/racinglife-color');
+  }
+  .mgmt-img{
+    @include image-div('portfolio/mgmt');
+  }
+  .mgmt-color-img{
+    @include image-div('portfolio/mgmt-color');
+  }
+  .pavegen-img{
+    @include image-div('portfolio/pavegen');
+  }
+  .pavegen-color-img{
+    @include image-div('portfolio/pavegen-color');
+  }
 
-/* Cosmetic */
-#simplePrevious, #simpleNext{
-  cursor: pointer;
-  font-size: 0.8em;
-  text-decoration: underline; 
+  #projects {
+    ul{
+      position: relative;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      li {   
+        width: 20%;   
+        float: left;
+        list-style: none;
+        position: relative;
+        @media screen and (max-width: $mobile-break) {
+          width: 100%;
+          float: none;
+        }
+        div{
+          @media screen and (max-width: $mobile-break) {
+            background-size: cover;
+          } 
+        }
+        .blackandwhite{
+          position: absolute;
+          top: 0;
+          left: 0;      
+        }
+      }
+    }
+  }
+  
+  #testimonials {
+    margin-bottom: 20px;
+    .testimonial{      
+      font-family: "chaparral-pro";
+      font-size: 1.2em;      
+      text-align: center;
+      .name {      
+        font-style: italic;
+        font-size: 2.4em;
+        color: $about-base-color;  
+      }
+      .position {
+        font-style: italic;  
+        color: $about-base-color;        
+      }
+      .testimonial-text {
+        padding-top: 10px;
+        text-align: left;
+      }
+    }
+  }
+  
+  #help {    
+    .help-background {
+      background-color: $service-outsourcing-color;
+      min-height: 250px;
+      padding-top: 40px;
+    }
+    #hire-us {
+      font-size: 3em;
+      color: $color-base-font;
+      text-align: center;  
+      span {
+        color: $service-outsourcing-color;
+      }
+    }
+    #get-in-touch {
+      @media screen and (max-width: $footer-break) {
+        text-align:center;
+      }
+    }
+    a {
+      color: $color-base-font;      
+      border: 2px solid $color-base-font;
+      padding: 10px 20px;
+      line-height: 4em;
+      font-family: "chaparral-pro";
+      &:hover {
+        color: $color-base-font-hover;
+        border-color: $color-base-font-hover;
+      }
+    }   
+  }
+  
+  #project
+  {
+    /* Headers for diferent projects */
+    #racinglife-background {
+      background-image: image-url('portfolio/racinglife-top.png');
+      @media screen and (max-width: $mobile-break) {
+        background-image: image-url('portfolio/racinglife@2x.png');
+      }    
+    }
+    #mgmt-background {
+      background-image: image-url('portfolio/mgmt-top.png');  
+      @media screen and (max-width: $mobile-break) {
+        background-image: image-url('portfolio/mgmt@2x.png');
+      }    
+    }
+    #facets-background {
+      background-image: image-url('portfolio/facets-top.png');
+      @media screen and (max-width: $mobile-break) {
+        background-image: image-url('portfolio/facets@2x.png');
+      }      
+    }
+    #pavegen-background {
+      background-image: image-url('portfolio/pavegen-top.png');
+      @media screen and (max-width: $mobile-break) {
+        background-image: image-url('portfolio/pavegen@2x.png');
+      }      
+    }
+    #everydayiplay-background {
+      background-image: image-url('portfolio/everydayiplay-top.png');
+      @media screen and (max-width: $mobile-break) {
+        background-image: image-url('portfolio/everydayiplay@2x.png');
+      }      
+    }
+    
+    .portfolio-header-background{
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 295px;
+    }
+    
+    #description {
+      font-family: "chaparral-pro";
+      font-size: 1.2em;
+      padding-bottom: 20px;
+    }
+    #title {
+      span {
+        font-size: 2em;
+      }
+      hr {
+        margin-top: 0px;
+        border-color: #000000;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 15px;      
+        li {
+          list-style: none;
+          font-family: "chaparral-pro";
+          font-style: italic;
+          color: $about-base-color;
+        }
+      }
+      a {
+        color: #000000;      
+        border: 2px solid #000000;
+        padding: 10px 20px;
+        line-height: 4em;
+        font-family: "chaparral-pro";
+        &:hover {
+          color: $about-base-color;
+          border-color: $about-base-color;
+        }
+      }
+    }
+    .screenshot {
+      text-align: center;
+      img {
+        max-width: 100%;
+        padding: 10px 0;
+      }
+    }  
+  }
 }

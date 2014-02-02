@@ -1,12 +1,31 @@
 $(document).ready ->  
-  open=false
+  openWeb=false
+  openMobile=false
+  openOutsourcing=false
   
-  $('body').on 'click', '.more', (event) ->    
-    $('.content').animate { height: 'toggle', opacity: 'toggle' }, 'slow', ->
-      if open
-        open=false
-        $('.more span').text('more');        
+  $('body').on 'click', '.more-web', (event) ->    
+    $('.content-web').animate { height: 'toggle', opacity: 'toggle' }, 'slow', ->
+      if openWeb
+        openWeb=false
+        $('.more-web span').text('more');        
       else
-        open=true
-        $('.more span').text('less');        
-    
+        openWeb=true
+        $('.more-web span').text('less');        
+        
+  $('body').on 'click', '.more-mobile', (event) ->    
+    $('.content-mobile').animate { height: 'toggle', opacity: 'toggle' }, 'slow', ->
+      if openMobile
+        openMobile=false
+        $('.more-mobile span').text('more');        
+      else
+        openMobile=true
+        $('.more-mobile span').text('less');
+        
+  $('body').on 'click', '.more-outsourcing', (event) ->    
+    $('.content-outsourcing').animate { height: 'toggle', opacity: 'toggle' }, 'slow', ->
+      if openOutsourcing
+        openOutsourcing=false
+        $('.more-outsourcing span').text('more');        
+      else
+        openOutsourcing=true
+        $('.more-outsourcing span').text('less');

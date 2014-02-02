@@ -5,7 +5,9 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
         <title>TribeCoders apps you need</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
@@ -20,6 +22,7 @@
         <link rel="stylesheet" href="styles/page-services.css">
         <link rel="stylesheet" href="styles/page-methodology.css">
         <link rel="stylesheet" href="styles/page-portfolio.css">
+        <link rel="stylesheet" href="styles/page-contact.css">
         <link rel="stylesheet" href="styles/webfonts.css">
         
         <!-- endbuild -->
@@ -33,13 +36,15 @@
         <![endif]-->
 
         <div id="main-background">
-            <div class="container" >
+            <div class="container" >                
                 <div id="main-logo">
-                    <img src="images/logo-main.png">
-                    <div id="main-company-name">
-                        <span class="Novecentosanswide-Bold">TRIBE</span><br>
-                        <span class="Novecentosanswide-Book coders">CODERS</span>
-                    </div>
+                    <a href="about.html">
+                        <div id="main-logo-img">&nbsp;</div>
+                        <div id="main-company-name">
+                            <span class="Novecentosanswide-Bold">TRIBE</span><br>
+                            <span class="Novecentosanswide-Book coders">CODERS</span>
+                        </div>
+                    </a>
                 </div>
                 <a href="about.html" id="tag-line" class="opacity-hover">
                     Apps you need
@@ -50,17 +55,22 @@
         </div>
 
         <div id="menu">
-            <a id="menu-button" class="direct" href="#menu">
-                &#9776;
+            <a id="menu-button" class="direct box-shadow-menu" href="#menu">
+                &nbsp;
             </a>
-            <a href="base.html" id="index-logo" class="opacity-hover"><img src="images/logo-small-white.png"></a>
+            <a href="base.html" id="index-logo" class="opacity-hover"><div class="logo-small-white-img">&nbsp;</div></a>
             <ol>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li><a href="services.html">SERVICES</a></li>
-                <li><a href="methodology.html">METHODOLOGY</a></li>
-                <li><a href="portfolio.html">PORTFOLIO</a></li>
-                <li><a href="contact.html">CONTACT US</a></li>
+                <li><a id="left-menu-about" href="about.html">ABOUT US</a></li>
+                <li><a id="left-menu-services" href="services.html">SERVICES</a></li>
+                <li><a id="left-menu-methodology" href="methodology.html">METHODOLOGY</a></li>
+                <li><a id="left-menu-portfolio" href="portfolio.html">PORTFOLIO</a></li>
+                <li><a id="left-menu-contact" href="contact.html">CONTACT US</a></li>
             </ol>
+            <div class="social-list">
+                <!--<a href="" target="_blank" class="direct"><div class="social-instagram-img">&nbsp;</div></a>-->
+                <a href="https://www.facebook.com/RacingLife" target="_blank" class="direct"><div class="social-facebook-img social opacity-hover">&nbsp;</div></a>
+                <a href="https://twitter.com/racinglifegame" target="_blank" class="direct"><div class="social-twitter-img social opacity-hover">&nbsp;</div></a>
+            </div>
         </div>
         
         <div id="main_content">         
@@ -75,15 +85,15 @@
                 <div class="row">
                     <div class="col-md-8">
                         <ul>
-                            <li><a href="about.html">ABOUT US</a></li>
-                            <li><a href="services.html">SERVICES</a></li>
-                            <li><a href="methodology.html">METHODOLOGY</a></li>
-                            <li><a href="portfolio.html">PORTFOLIO</a></li>
-                            <li><a href="contact.html" class="contact">CONTACT US</a></li>
+                            <li><a id="footer-menu-about" href="about.html">ABOUT US</a></li>
+                            <li><a id="footer-menu-services" href="services.html">SERVICES</a></li>
+                            <li><a id="footer-menu-methodology" href="methodology.html">METHODOLOGY</a></li>
+                            <li><a id="footer-menu-portfolio" href="portfolio.html">PORTFOLIO</a></li>
+                            <li><a id="footer-menu-contact" href="contact.html">CONTACT US</a></li>
                         </ul>
                     </div>
                     <div class="col-md-4" id="tribecoders">
-                        <a href="base.html">TRIBE CODERS 2014</a>
+                        <a href="base.html">TRIBE CODERS <span>2014</span></a>
                     </div>
                 </div>
             </div>

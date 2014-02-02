@@ -1,6 +1,6 @@
 @import "config";
 
-#services {
+#services { 
   .service {    
     color: #ffffff;
     position: relative;
@@ -10,7 +10,7 @@
       
       .service-type {
         text-align: center;
-        font-size: 3em;
+        font-size: 2.9em;
       }
       a {
         display: block;
@@ -27,8 +27,11 @@
         margin-top: 10px;
         margin-bottom: -1px;
         display: block; height: 1px;
-        width: 400px;
+        width: 360px;
         border-color: #ffffff;
+        @media screen and (max-width: $mobile-break) {
+          width: 100%;
+        }
       } 
       .arrow-down {
         margin: auto;
@@ -36,8 +39,10 @@
       
       .service-logo {
         text-align: right;
-        img {
-          margin-top: 44px;
+        .service-img {
+          position: relative;
+          top: 44px;
+          margin: auto;
         }
       }           
     }
@@ -65,7 +70,9 @@
     }
     .content {
       text-align: center;
-    
+      .service-no {
+        margin: auto;
+      }
       .title {
         font-size: 2.5em;
         font-family: "chaparral-pro";
@@ -100,18 +107,32 @@
       border-top-color: $service-mobile-apps-color;
     }
     .content {
-      img {
-        margin: 0 50px 0 50px;
-      }
       #description {
-        margin-top: 30px;
-        font-size: 1.3em;
-        font-family: "chaparral-pro";
+        margin-top: 30px;        
+        text-align: center;
+        .os-logos{
+          margin: auto;
+          width: 320px;
+          @media screen and (max-width: $mobile-break) {
+            width: 160px;
+          }
+        }
+        .os {
+          margin: 0 20px 30px 20px;
+          float: left;
+        }
+        #technology {
+          font-size: 1.3em;
+          font-family: "chaparral-pro";
+          padding-top: 30px;
+          text-align: left;
+        }
       }
       #applications {
         font-size: 2.2em;
         font-family: "chaparral-pro";
         font-style: italic;
+        padding-top: 30px;
       }
       span {
         color: $service-mobile-apps-color;
@@ -135,12 +156,18 @@
       border-top-color: $service-outsourcing-color;
     }
     .content {
+            
       #hire-us {
         font-size: 2.2em;
         font-family: "chaparral-pro";
         font-style: italic;
         span {
           color: $service-outsourcing-color;
+        }
+      }
+      #get-in-touch {
+        @media screen and (max-width: $footer-break) {
+          padding-top:30px;
         }
       }
       a {
@@ -154,5 +181,32 @@
         }
       }
     }   
+  }
+  
+  .services-web-apps-img {
+    @include image-div('services-web-apps');
+  }
+  .services-mobile-apps-img {
+    @include image-div('services-mobile-apps');
+  }
+  .services-outsourcing-img {
+    @include image-div('services-outsourcing');
+  }
+  
+  .services-1-img {
+    @include image-div('services-1');
+  }
+  .services-2-img {
+    @include image-div('services-2');
+  }
+  .services-3-img {
+    @include image-div('services-3');
+  }
+  
+  .services-apple-img{
+    @include image-div('services-apple');
+  }
+  .services-android-img{
+    @include image-div('services-android');
   }
 }

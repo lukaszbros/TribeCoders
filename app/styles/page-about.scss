@@ -7,7 +7,7 @@
   background-size: cover;
   position: relative;
   margin: 0 auto;
-  height: 250px;
+  min-height: 250px;
   
   #motto {
     text-align: center;
@@ -33,6 +33,9 @@
   .details {
     text-align: center;
     padding-top: 60px;    
+    @media screen and (max-width: $mobile-break) {
+      padding-top: 105px;  
+    }
     .name {
       color: $about-base-color;
       font-size: 2.5em;
@@ -62,8 +65,7 @@
   
   .photo {
     height: 276px;
-    background-repeat: no-repeat;
-    background-position: center;
+    margin: auto;    
     .circle {
       position: relative;
       top: 138px;
@@ -76,33 +78,45 @@
       font-size: 1.2em; 
       padding-top: 30px;
       color: #ffffff; 
+      @media screen and (max-width: $mobile-break) {
+        top: 230px;
+        left: 0;
+        margin: auto;
+      }
+    }    
+  }  
+
+  #about-footer-background {
+    background-image: image-url('background-about-footer.jpg');
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+    min-height: 1000px;
+    
+    #footer-text {
+      font-size: 4em;
+      text-transform: uppercase;
+      color: #ffffff;
+      @media screen and (max-width: $mobile-break) {
+        font-size: 3em;
+      }
+    }
+    .row {
+      margin-top: 300px;
     }
   }
+  
   #klaudyna {
-    background-image: image-url('about-klaudyna.png');
+    @include image-div('about-klaudyna');
   }
   #lukasz {
-    background-image: image-url('about-lukasz.png');
+    @include image-div('about-lukasz');
   }  
   #michal {
-    background-image: image-url('about-michal.png');
+    @include image-div('about-michal');
   }
-}
-
-#about-footer-background {
-  background-image: image-url('background-about-footer.jpg');
-  background-size: cover;
-  position: relative;
-  margin: 0 auto;
-  min-height: 1000px;
-  
-  #footer-text {
-    font-size: 4em;
-    text-transform: uppercase;
-    color: #ffffff;
-  }
-  .row {
-    margin-top: 300px;
+  #nazar {
+    @include image-div('about-nazar');
   }
 }
 

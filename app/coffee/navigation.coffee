@@ -1,4 +1,6 @@
 $(document).ready ->  
+  title = "TribeCoders apps you need";
+  
   cl = new CanvasLoader('canvasloader-container')
   cl.setColor('#dddddd')
   cl.setShape('spiral')
@@ -22,19 +24,27 @@ $(document).ready ->
       state = History.getState()
       forward = getParameterByName('forward')
       if (forward && forward != '')
-        History.pushState(null, null, forward)
+        History.pushState(null, title, forward)
         return;  
-      $('#main_content').load state.url, ->        
+      $('#main_content').load state.url, ->
         cl.hide()
         $(@).fadeIn('fast')      
         urlArray = state.url.split('/')
-        address = urlArray[urlArray.length-1]
+        address = urlArray[urlArray.length-1]        
         if (_gaq?)
           _gaq.push(['_trackPageview', address])
+        document.title = title;
         if (address == 'base.html')
           $('#main-background').fadeIn 'fast', ->
-        else          
-          $('footer').fadeIn 'fast'     
+            $('#menu a').removeClass('selected')    
+            $('footer a').removeClass('selected')  
+        else
+          $('footer').fadeIn 'fast'          
+          pageName = address.substring(0, address.indexOf('.'))
+          $('#menu a').removeClass('selected')    
+          $('footer a').removeClass('selected')  
+          $('#left-menu-'+pageName).addClass('selected')
+          $('#footer-menu-'+pageName).addClass('selected')
       
   runHistory()
   
@@ -46,7 +56,7 @@ $(document).ready ->
     else
       $('#main-background').fadeOut 'fast'
       $('footer').fadeIn 'fast'
-    History.pushState(null, null, forward)
+    History.pushState(null, title, forward)
     
   #Load page animation function
   loadContent = (address) ->
@@ -54,17 +64,16 @@ $(document).ready ->
     urlArray = state.url.split('/')
     if (urlArray[urlArray.length-1] == address) 
       return;
-    console.log(address);
     if (address == 'base.html')      
         $('footer').fadeOut 'fast', ->
         $('#main_content').fadeOut 'fast', ->
           cl.show()                
-          History.pushState(null,null,address)
+          History.pushState(null,title,address)
     else       
       $('#main-background').fadeOut 'fast', ->        
         $('#main_content').fadeOut 'fast', ->
           cl.show()
-          History.pushState(null,null,address)
+          History.pushState(null,title,address)
           
   isMenuOpen = false;
   openMenu = () ->
@@ -86,7 +95,7 @@ $(document).ready ->
   #All links
   $('body').on 'click', 'a:not(.direct)', (event) ->
     event.preventDefault()
-    href = $(@).attr('href')
+    href = $(@).attr('href')    
     loadContent(href)
     closeMenu()      
    

@@ -28,7 +28,7 @@ hr {
   border: 0; border-top: 1px solid $about-base-color;
 }
 .short-hr {
-  width: 30px;
+  width: 40px;
   position: relative;
   top: 10px;
 }
@@ -49,11 +49,13 @@ hr {
   font-weight: normal;
   font-style: normal;
 }
+
 .Novecentosanswide-Book { 
   font-family: Novecentosanswide-Book;
   font-weight: normal;
   font-style: normal;
 }
+/*
 .Novecentosanswide-DemiBold { 
   font-family: Novecentosanswide-DemiBold;
   font-weight: normal;
@@ -68,7 +70,7 @@ hr {
   font-family: Novecentosanswide-Medium;
   font-weight: normal;
   font-style: normal;
-}
+}*/
 .Novecentosanswide-Normal { 
   font-family: Novecentosanswide-Normal;
   font-weight: normal;
@@ -97,19 +99,58 @@ hr {
 }
 
 .divider {
-    text-align:center;
-    hr {
-      margin-top: 2px;
-      margin-bottom: -1px;
-      display: block; height: 1px;
-      border: 0; border-top: 1px solid $about-base-color;      
-      width: 80px; 
-    }
-    .arrow-down {
-      border-top-color: $about-base-color;
-      margin: auto;
-    }
+  text-align:center;
+  display: block;
+  width:100%;
+  .divider-img {
+    margin: auto;
   }
+  hr {
+    margin-top: 2px;
+    margin-bottom: -1px;
+    display: block; height: 1px;
+    border: 0; border-top: 1px solid $about-base-color;      
+    width: 80px; 
+  }
+  .arrow-down {
+    border-top-color: $about-base-color;
+    margin: auto;
+  }
+}
+
+.logo-small-white-img {
+  @include image-div('logo-small-white');
+}
+
+.logo-small-grey-img {
+  @include image-div('logo-small-grey');
+}
+
+.logo-small-blue-img {
+  @include image-div('logo-small-blue');
+}
+
+.logo-small-baige-img{
+  @include image-div('logo-small-baige');
+}
+
+.social-list{
+  width: 84px;
+  margin: auto;
+} 
+.social {
+  margin: 0 10px;
+  float: left;
+}
+.social-facebook-img{
+  @include image-div('social-facebook');
+}
+.social-twitter-img{
+  @include image-div('social-twitter');
+}
+.social-instagram-img{
+  @include image-div('social-instagram');
+}
 
 .opacity-hover {
     @include opacity(0.8);
@@ -144,12 +185,40 @@ hr {
     width: 40px;
     background-color: $color-menu-background;
     font-size: 2.5em;
+    @media screen and (max-width: $menu-break) {
+      top: 0;
+    }
   }
+  
+  .box-shadow-menu {
+    position: relative;
+    padding-left: 1.25em;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      border-bottom: 18px double $color-base-font;
+      border-top: 6px solid $color-base-font;
+      height: 30px;
+      width: 36px;
+    }
+    &:hover:before {
+      border-color: $color-base-font-hover;      
+    }
+  }  
+
   a#index-logo {
     display:block;
     position: relative;
     top: 29%;    
-    left: 75px;    
+    left: 75px;   
+    @media screen and (max-width: $menu-break) {
+      top: 19%;
+    }   
+    @media screen and (max-width: $mobile-break) {
+      top: 10%;
+    } 
   }
   
   ol {
@@ -158,6 +227,12 @@ hr {
     color: #ffffff;
     counter-reset: item;
     list-style-type: none;
+    @media screen and (max-width: $menu-break) {
+      top: 20%;
+    }
+    @media screen and (max-width: $mobile-break) {
+      top: 10%;
+    }
     
     li {
       margin-top: 1.3em;
@@ -173,8 +248,21 @@ hr {
       top: 1em;
       left: -10px;      
       font-family: Novecentosanswide-Bold;
-      font-size: 1.3em;      
-      //color: #ffffff;
+      font-size: 1.3em;  
+    }
+    .selected {
+      color: $color-base-font-hover;
+      &:hover {
+        color: $color-base-font-hover;
+      }
+    }
+  }
+  .social-list {
+    position: absolute;
+    bottom: 50px;
+    left: 50px; 
+    @media screen and (max-height: $main-page-height-break) {
+      bottom: 20px;
     }
   }
 }
@@ -182,6 +270,9 @@ hr {
 /* Footer */
 footer {
   position:relative;
+  @media screen and (max-width: $footer-break) {
+    text-align:center;
+  }
   .row {
     margin-top: 40px;
     margin-botom: 40px;
@@ -195,11 +286,11 @@ footer {
      display: inline-block;
      a {
       text-decoration: none;
-      padding: 0 1em;
+      padding: 1em 1em;
       display: block;
       color: #ffffff;
     }
-    .contact {
+    .selected {
       color: $color-base-font;
       &:hover {
         color: $color-base-font-hover;
@@ -208,6 +299,12 @@ footer {
    }
   }
   #tribecoders {
-    text-align:right;
+    padding: 1em 1em;
+    @media screen and (min-width: $footer-break) {
+      text-align:right;
+    }
+    span {
+      color: #ffffff;
+    }
   }
 }

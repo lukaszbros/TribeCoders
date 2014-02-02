@@ -12,11 +12,22 @@
 #main-logo {
   margin:auto;
   width: 250px;
-  margin-top: 15%;
+  margin-top: 13%;
   text-align: center;
   color: #ffffff;
+  @media screen and (max-width: $menu-break) {
+    margin-top: 5%;
+  }
+  @media screen and (max-height: $main-page-height-break) {
+    margin-top: 5%;
+  }
+  #main-logo-img {
+    @include image-div('logo-main');    
+    margin: auto;
+  }
   
   #main-company-name {
+    color: #ffffff;
     padding-top: 30px;
     font-size: 5em;
     line-height: 0.9em;
@@ -30,12 +41,21 @@
   display: block;
   margin:auto;
   width: 250px;
-  margin-top: 10%;
+  margin-top: 8%;
   text-align: center;
   color: $color-base-font;
   font-size: 1.6em;
   font-family: "chaparral-pro";
   font-style: italic;
+  @media screen and (max-width: $menu-break) {
+    margin-top: 6%;
+  }
+  @media screen and (max-width: $mobile-break) {
+    margin-top: 3%;
+  }
+  @media screen and (max-height: $main-page-height-break) {
+    margin-top: 3%;
+  }
   
   &:hover{
     text-decoration:none;

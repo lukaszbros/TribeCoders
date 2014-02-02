@@ -1,0 +1,56 @@
+@import "config";
+
+#contact {
+  hr {
+    border-color: $color-base-font;
+  }
+  .title {
+    span {
+      font-size: 0.7em;
+      font-family: "chaparral-pro";
+      font-style: italic;
+      position: relative;
+      top: -20px;
+    }
+  }
+  .contact-data {
+    font-size: 1.2em;
+    .contact-method {
+      padding-top: 15px
+    }
+    .contact-img {
+      margin: 0 10px 0 0;
+      float: left;
+    }
+  }
+  #map-background {
+    background-image: image-url('background-map.jpg');
+    background-position: center bottom;
+    background-size: cover;    
+    height: 742px;
+  }
+  #find-us-background {
+    background-color: $contact-background-color;    
+  }
+  .find-us {
+    color: $color-base-font;
+    text-align: center;
+    font-size: 3em;    
+    .short-hr {
+      top: 0px;
+    }   
+  }
+  
+  .contact-phone-img{
+    @include image-div('contact-phone');
+  }
+  .contact-mail-img{
+    @include image-div('contact-mail');
+  }
+  .contact-time-img{
+    @include image-div('contact-time');
+  }
+  .contact-location-img{
+    @include image-div('contact-location');
+  }
+}

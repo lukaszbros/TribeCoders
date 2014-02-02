@@ -14,29 +14,46 @@
                 <hr>
                 <div class="arrow-down"></div>
                 <ul>
-                    <li><a href="#">ALL</a></li>
-                    <li><a href="#">WEB APPS</a></li>
-                    <li><a href="#">MOBILE APPS</a></li>
-                    <li><a href="#">WEB DESIGN</a></li>
+                    <li><a class="direct select" id="all" href="#">ALL</a></li>
+                    <li><a class="direct select" id="web" href="#">WEB APPS</a></li>
+                    <li><a class="direct select" id="mobile" href="#">MOBILE APPS</a></li>
+                    <li><a class="direct select" id="design" href="#">WEB DESIGN</a></li>
                 </ul>
             </div>
         </div>
-        <div id="viewport">
+        <div id="projects">
             <ul>
-                <li><a href="#"><img src="images/portfolio/racinglife.png"></a></li>
-                <li><a href="#"><img src="images/portfolio/everydayiplay.png"></a></li>
-                <li><a href="#"><img src="images/portfolio/pavegen.png"></a></li>
-                <li><a href="#"><img src="images/portfolio/mgmt.png"></a></li>
-                <li><a href="#"><img src="images/portfolio/facets.png"></a></li>
-            </ul>
-        </div>
+                <li>
+                    <a href="portfolio-facets.html"><div class="facets-color-img">&nbsp;</div></a>
+                    <a href="portfolio-facets.html"><div class="blackandwhite web facets-img">&nbsp;</div></a></li>
+                <li>
+                    <a href="portfolio-everydayiplay.html"><div class="everydayiplay-color-img">&nbsp;</div></a>
+                    <a href="portfolio-everydayiplay.html"><div class="blackandwhite design everydayiplay-img">&nbsp;</div></a>
+                </li>
+                <li>
+                    <a href="portfolio-racinglife.html"><div class="racinglife-color-img">&nbsp;</div></a>
+                    <a href="portfolio-racinglife.html"><div class="blackandwhite web design racinglife-img">&nbsp;</div></a>    
+                </li>                
+                <li>
+                    <a href="portfolio-mgmt.html"><div class="mgmt-color-img">&nbsp;</div></a>                    
+                    <a href="portfolio-mgmt.html"><div class="blackandwhite mobile mgmt-img">&nbsp;</div></a>
+                </li>
+                <li>
+                    <a href="portfolio-pavegen.html"><div class="pavegen-color-img">&nbsp;</div></a>
+                    <a href="portfolio-pavegen.html"><div class="blackandwhite web pavegen-img">&nbsp;</div></a>
+                </li>
+            </ul>     
+            <div class="clearfix">&nbsp;</div>       
+        </div>        
         <div class="container">
             <div class="row">
-                <a href="#testimonials" class="col-md-4 col-md-offset-4 divider opacity-hover-revert direct">
-                    <img src="images/logo-small-blue.png">
-                    <hr>
-                    <div class="arrow-down">&nbsp;</div>
-                </a>
+                <div class="col-md-4 col-md-offset-4">
+                    <a href="#testimonials" class="divider opacity-hover-revert direct">
+                        <div class="logo-small-blue-img divider-img">&nbsp;</div>
+                        <hr>
+                        <div class="arrow-down">&nbsp;</div>
+                    </a>
+                </div>
             </div>
         </div> 
     </section>
@@ -46,30 +63,32 @@
                 <div class="col-md-12">OUR CLIENTS SAY</div>                
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 testimonial">
                     <span class="name">Richard Lucas</span>
                     <br>
                     <span class="position">/angel investor/</span>
                     <hr class="short-hr">
-                    &#8220;I have been a client of the Tribe Coders Software house team since January 2012. Over the period we have worked together they have done an exvellent job developing the RecingLife.net to a high standard at a very reasonable cost&#8221;
+                    <div class="testimonial-text">
+                        &#8220;I have been a client of the Tribe Coders Software house team since January 2012. Over the period we have worked together they have done an exvellent job developing the RecingLife.net to a high standard at a very reasonable cost.&#8221;
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 testimonial">
                     <span class="name">Kim Loy</span>
                     <br>
                     <span class="position">/project manager, Pavegen Systems LTD/</span>
                     <hr class="short-hr">
-                    &#8220;I have been a client of the Tribe Coders Software house team since January 2012. Over the period we have worked together they have done an exvellent job developing the RecingLife.net to a high standard at a very reasonable cost&#8221;
+                    <div class="testimonial-text">
+                        &#8220;We need software for different clients globally which are often unique and creative. Tribe Coders has been excellent in delivering and understanding each brief within tight lead times. Communication is fantastic and we are very happy with the results.&#8221;
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 testimonial">
                     <span class="name">Vincent Vergonjeanne</span>
                     <br>
                     <span class="position">/CEO & founder ar EVERYDAYiPLAY/</span>
                     <hr class="short-hr">
-                    &#8220;I have been a client of the Tribe Coders Software house team since January 2012. Over the period we have worked together they have done an exvellent job developing the RecingLife.net to a high standard at a very reasonable cost&#8221;
+                    <div class="testimonial-text">
+                        &#8220;Amazing job guys. Right on schedule with world-class quality. Everyone in my network is full of compliment. I will recommend you everywhere I go now.&#8221;
+                    </div>
                 </div>
             </div>
     </section>
@@ -78,9 +97,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8" id="hire-us">
-                        HOW CAN WE HELP
+                        HOW CAN WE HELP ?
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" id="get-in-touch">
                         <a href="contact.html">get in touch &raquo;</a>
                     </div>
                </div>
