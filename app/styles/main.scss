@@ -176,6 +176,9 @@ hr {
   width: 200px;
   background-color: $color-menu-background;
   @include opacity(0.9);
+  @media screen and (max-width: $menu-break) {
+    @include opacity(1);
+  }
   
   a#menu-button {
     position: fixed;
