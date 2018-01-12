@@ -1,7 +1,7 @@
 (function() {
   $(document).ready(function() {
     var cl, closeMenu, forward, getParameterByName, isMenuOpen, loadContent, openMenu, runHistory, title;
-    title = "TribeCoders apps you need";
+    title = "TribeCoders help you need";
     cl = new CanvasLoader('canvasloader-container');
     cl.setColor('#dddddd');
     cl.setShape('spiral');
@@ -70,6 +70,8 @@
       }
       History.pushState(null, title, forward);
     }
+    
+    //Load page animation function
     loadContent = function(address) {
       var state, urlArray;
       state = History.getState();
@@ -119,6 +121,8 @@
         return openMenu();
       }
     });
+    
+    //All links
     $('body').on('click', 'a:not(.direct)', function(event) {
       var href;
       event.preventDefault();
@@ -141,6 +145,8 @@
   });
 
   $(document).ready(function() {
+    
+    //selecting filtering option
     $("body").on("click", ".select", function(event) {
       var id;
       event.preventDefault();
@@ -151,6 +157,12 @@
           $(".blackandwhite").stop().fadeTo("fast", 0.01);
           return $("#selector .arrow-down").animate({
             left: "-150px"
+          });
+        case "team":
+          $(".blackandwhite").stop().fadeTo("fast", 1);
+          $(".team").stop().fadeTo("fast", 0.01);
+          return $("#selector .arrow-down").animate({
+            left: "-50px"
           });
         case "web":
           $(".blackandwhite").stop().fadeTo("fast", 1);
@@ -172,6 +184,8 @@
           });
       }
     });
+    
+    //Saturation and desaturation of portfolio  
     $("body").on("mouseenter", ".blackandwhite", function() {
       return $(this).stop().fadeTo("fast", 0.01);
     });
@@ -185,6 +199,20 @@
     openWeb = false;
     openMobile = false;
     openOutsourcing = false;
+    $('body').on('click', '.more-team-building', function(event) {
+      return $('.content-team-building').animate({
+        height: 'toggle',
+        opacity: 'toggle'
+      }, 'slow', function() {
+        if (openWeb) {
+          openWeb = false;
+          return $('.more-team-building  span').text('more');
+        } else {
+          openWeb = true;
+          return $('.more-team-building  span').text('less');
+        }
+      });
+    });
     $('body').on('click', '.more-web', function(event) {
       return $('.content-web').animate({
         height: 'toggle',
@@ -231,4 +259,4 @@
 
 }).call(this);
 
-//# sourceMappingURL=../../app/maps/main.js.map
+//# sourceMappingURL=../maps/main.js.map

@@ -60,6 +60,41 @@
       margin-bottom: 100px;
     }
   }
+  #team-building {
+    .service {
+      background-color: $service-outsourcing-color;
+    }
+    .services-separator {
+      border-top-color: $service-outsourcing-color;
+    }
+    .content {
+
+      #help-team {
+        font-size: 2.2em;
+        font-family: "chaparral-pro";
+        font-style: italic;
+        span {
+          color: $service-outsourcing-color;
+        }
+      }
+      #contact {
+        @media screen and (max-width: $footer-break) {
+          padding-top:30px;
+        }
+      }
+      a {
+        color: #000000;
+        border: 2px solid #000000;
+        padding: 10px 20px;
+        line-height: 2.3em;
+        &:hover {
+          color: $service-outsourcing-color;
+          border-color: $service-outsourcing-color;
+        }
+      }
+    }
+  }
+
   
   #web-apps {
     .service {
@@ -148,6 +183,7 @@
       }
     }
   }
+
   #outsourcing {
     .service {
       background-color: $service-outsourcing-color;
@@ -156,7 +192,7 @@
       border-top-color: $service-outsourcing-color;
     }
     .content {
-            
+
       #hire-us {
         font-size: 2.2em;
         font-family: "chaparral-pro";
@@ -180,8 +216,9 @@
           border-color: $service-outsourcing-color;
         }
       }
-    }   
+    }
   }
+
   
   .services-web-apps-img {
     @include image-div('services-web-apps');

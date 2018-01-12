@@ -9,6 +9,10 @@ $(document).ready ->
       when "all" 
         $(".blackandwhite").stop().fadeTo( "fast" , 0.01)  
         $("#selector .arrow-down").animate ({left:"-150px"})
+      when "team"
+        $(".blackandwhite").stop().fadeTo( "fast" , 1)
+        $(".team").stop().fadeTo( "fast" , 0.01)
+        $("#selector .arrow-down").animate ({left:"-50px"})
       when "web"
         $(".blackandwhite").stop().fadeTo( "fast" , 1) 
         $(".web").stop().fadeTo( "fast" , 0.01)      

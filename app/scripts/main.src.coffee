@@ -109,3 +109,78 @@ $(document).ready ->
   $('body').on 'mouseleave', '.opacity-hover-revert', ->
       $(this).stop().fadeTo( "fast" , 1)
 
+
+$(document).ready ->
+  
+  #selecting filtering option
+  $("body").on "click", ".select", (event) ->
+    event.preventDefault()
+    id = $(this).attr('id');
+    console.log(id)
+    switch id
+      when "all" 
+        $(".blackandwhite").stop().fadeTo( "fast" , 0.01)  
+        $("#selector .arrow-down").animate ({left:"-150px"})
+      when "team"
+        $(".blackandwhite").stop().fadeTo( "fast" , 1)
+        $(".team").stop().fadeTo( "fast" , 0.01)
+        $("#selector .arrow-down").animate ({left:"-50px"})
+      when "web"
+        $(".blackandwhite").stop().fadeTo( "fast" , 1) 
+        $(".web").stop().fadeTo( "fast" , 0.01)      
+        $("#selector .arrow-down").animate ({left:"-50px"})
+      when "mobile"
+        $(".blackandwhite").stop().fadeTo( "fast" , 1)  
+        $(".mobile").stop().fadeTo( "fast" , 0.01)      
+        $("#selector .arrow-down").animate ({left:"50px"})      
+      when "design" 
+        $(".blackandwhite").stop().fadeTo( "fast" , 1)
+        $(".design").stop().fadeTo( "fast" , 0.01) 
+        $("#selector .arrow-down").animate ({left:"150px"})            
+  
+  #Saturation and desaturation of portfolio  
+  $("body").on "mouseenter", ".blackandwhite", ->
+    $(this).stop().fadeTo( "fast" , 0.01)
+  $("body").on "mouseleave", ".blackandwhite", ->
+    $(this).stop().fadeTo( "fast" , 1) 
+    
+
+$(document).ready ->  
+  openWeb=false
+  openMobile=false
+  openOutsourcing=false
+  $('body').on 'click', '.more-team-building', (event) ->
+    $('.content-team-building').animate { height: 'toggle', opacity: 'toggle' }, 'slow', ->
+      if openWeb
+        openWeb=false
+        $('.more-team-building  span').text('more');
+      else
+        openWeb=true
+        $('.more-team-building  span').text('less');
+
+  $('body').on 'click', '.more-web', (event) ->    
+    $('.content-web').animate { height: 'toggle', opacity: 'toggle' }, 'slow', ->
+      if openWeb
+        openWeb=false
+        $('.more-web span').text('more');        
+      else
+        openWeb=true
+        $('.more-web span').text('less');        
+        
+  $('body').on 'click', '.more-mobile', (event) ->    
+    $('.content-mobile').animate { height: 'toggle', opacity: 'toggle' }, 'slow', ->
+      if openMobile
+        openMobile=false
+        $('.more-mobile span').text('more');        
+      else
+        openMobile=true
+        $('.more-mobile span').text('less');
+        
+  $('body').on 'click', '.more-outsourcing', (event) ->    
+    $('.content-outsourcing').animate { height: 'toggle', opacity: 'toggle' }, 'slow', ->
+      if openOutsourcing
+        openOutsourcing=false
+        $('.more-outsourcing span').text('more');        
+      else
+        openOutsourcing=true
+        $('.more-outsourcing span').text('less');

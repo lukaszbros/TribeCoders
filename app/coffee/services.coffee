@@ -2,7 +2,15 @@ $(document).ready ->
   openWeb=false
   openMobile=false
   openOutsourcing=false
-  
+  $('body').on 'click', '.more-team-building', (event) ->
+    $('.content-team-building').animate { height: 'toggle', opacity: 'toggle' }, 'slow', ->
+      if openWeb
+        openWeb=false
+        $('.more-team-building  span').text('more');
+      else
+        openWeb=true
+        $('.more-team-building  span').text('less');
+
   $('body').on 'click', '.more-web', (event) ->    
     $('.content-web').animate { height: 'toggle', opacity: 'toggle' }, 'slow', ->
       if openWeb
