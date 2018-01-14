@@ -49,6 +49,12 @@
   .zrechnung-color-img{
     @include image-div('portfolio/zrechnung-color');
   }
+.touramigo-img{
+    @include image-div('portfolio/touramigo');
+}
+.touramigo-color-img{
+    @include image-div('portfolio/touramigo-color');
+}
   .facets-img{
     @include image-div('portfolio/facets');
   }
@@ -171,6 +177,12 @@
       @media screen and (max-width: $mobile-break) {
         background-image: image-url('portfolio/collective-sense@2x.png');
       }
+    }
+    #touramigo-background {
+        background-image: image-url('portfolio/touramigo-top.png');
+        @media screen and (max-width: $mobile-break) {
+            background-image: image-url('portfolio/touramigo@2x.png');
+        }
     }
     #zrechnung-background {
       background-image: image-url('portfolio/zrechnung-top.png');
