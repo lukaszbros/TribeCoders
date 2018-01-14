@@ -145,7 +145,6 @@
   });
 
   $(document).ready(function() {
-    
     //selecting filtering option
     $("body").on("click", ".select", function(event) {
       var id;
@@ -156,36 +155,35 @@
         case "all":
           $(".blackandwhite").stop().fadeTo("fast", 0.01);
           return $("#selector .arrow-down").animate({
-            left: "-150px"
+            left: "-160px"
           });
         case "team":
           $(".blackandwhite").stop().fadeTo("fast", 1);
           $(".team").stop().fadeTo("fast", 0.01);
           return $("#selector .arrow-down").animate({
-            left: "-50px"
+            left: "-80px"
           });
         case "web":
           $(".blackandwhite").stop().fadeTo("fast", 1);
           $(".web").stop().fadeTo("fast", 0.01);
           return $("#selector .arrow-down").animate({
-            left: "-50px"
+            left: "0px"
           });
         case "mobile":
           $(".blackandwhite").stop().fadeTo("fast", 1);
           $(".mobile").stop().fadeTo("fast", 0.01);
           return $("#selector .arrow-down").animate({
-            left: "50px"
+            left: "80px"
           });
         case "design":
           $(".blackandwhite").stop().fadeTo("fast", 1);
           $(".design").stop().fadeTo("fast", 0.01);
           return $("#selector .arrow-down").animate({
-            left: "150px"
+            left: "160px"
           });
       }
     });
-    
-    //Saturation and desaturation of portfolio  
+    //Saturation and desaturation of portfolio
     $("body").on("mouseenter", ".blackandwhite", function() {
       return $(this).stop().fadeTo("fast", 0.01);
     });

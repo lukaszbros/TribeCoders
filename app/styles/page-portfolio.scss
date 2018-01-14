@@ -1,32 +1,32 @@
 @import "config";
 
 #portfolio {
-  
+
   #selector {
     text-align:center;
     @media screen and (max-width: $mobile-break) {
       display: none;
     }
-    
+
     hr  {
-      width: 350px;
+      width: 400px;
     }
     .arrow-down {
       border-top-color: $about-base-color;
       margin: auto;
       margin-top: -21px;
-      left: -150px;
+      left: -160px;
       position: relative;
     }
     ul {
       padding: 0;
       margin: 10px auto;
       width: 400px;
-      li { 
+      li {
         float: left;
         list-style: none;
         display: block;
-        width: 25%;
+        width: 20%;
         a {
           color: #000000;
           &:hover {
@@ -42,6 +42,12 @@
   }
   .collective-sense-color-img{
     @include image-div('portfolio/collective-sense-color');
+  }
+  .zrechnung-img{
+    @include image-div('portfolio/zrechnung');
+  }
+  .zrechnung-color-img{
+    @include image-div('portfolio/zrechnung-color');
   }
   .facets-img{
     @include image-div('portfolio/facets');
@@ -80,8 +86,8 @@
       padding: 0;
       margin: 0;
       width: 100%;
-      li {   
-        width: 16.6%;
+      li {
+        width: 12.5%;
         float: left;
         list-style: none;
         position: relative;
@@ -92,31 +98,31 @@
         div{
           @media screen and (max-width: $mobile-break) {
             background-size: cover;
-          } 
+          }
         }
         .blackandwhite{
           position: absolute;
           top: 0;
-          left: 0;      
+          left: 0;
         }
       }
     }
   }
-  
+
   #testimonials {
     margin-bottom: 20px;
-    .testimonial{      
+    .testimonial{
       font-family: "chaparral-pro";
-      font-size: 1.2em;      
+      font-size: 1.2em;
       text-align: center;
-      .name {      
+      .name {
         font-style: italic;
         font-size: 2.4em;
-        color: $about-base-color;  
+        color: $about-base-color;
       }
       .position {
-        font-style: italic;  
-        color: $about-base-color;        
+        font-style: italic;
+        color: $about-base-color;
       }
       .testimonial-text {
         padding-top: 10px;
@@ -124,8 +130,8 @@
       }
     }
   }
-  
-  #help {    
+
+  #help {
     .help-background {
       background-color: $service-outsourcing-color;
       min-height: 250px;
@@ -134,7 +140,7 @@
     #hire-us {
       font-size: 3em;
       color: $color-base-font;
-      text-align: center;  
+      text-align: center;
       span {
         color: $service-outsourcing-color;
       }
@@ -145,7 +151,7 @@
       }
     }
     a {
-      color: $color-base-font;      
+      color: $color-base-font;
       border: 2px solid $color-base-font;
       padding: 10px 20px;
       line-height: 4em;
@@ -154,9 +160,9 @@
         color: $color-base-font-hover;
         border-color: $color-base-font-hover;
       }
-    }   
+    }
   }
-  
+
   #project
   {
     /* Headers for different projects */
@@ -166,44 +172,50 @@
         background-image: image-url('portfolio/collective-sense@2x.png');
       }
     }
+    #zrechnung-background {
+      background-image: image-url('portfolio/zrechnung-top.png');
+      @media screen and (max-width: $mobile-break) {
+        background-image: image-url('portfolio/zrechnung@2x.png');
+      }
+    }
     #racinglife-background {
       background-image: image-url('portfolio/racinglife-top.png');
       @media screen and (max-width: $mobile-break) {
         background-image: image-url('portfolio/racinglife@2x.png');
-      }    
+      }
     }
     #mgmt-background {
-      background-image: image-url('portfolio/mgmt-top.png');  
+      background-image: image-url('portfolio/mgmt-top.png');
       @media screen and (max-width: $mobile-break) {
         background-image: image-url('portfolio/mgmt@2x.png');
-      }    
+      }
     }
     #facets-background {
       background-image: image-url('portfolio/facets-top.png');
       @media screen and (max-width: $mobile-break) {
         background-image: image-url('portfolio/facets@2x.png');
-      }      
+      }
     }
     #pavegen-background {
       background-image: image-url('portfolio/pavegen-top.png');
       @media screen and (max-width: $mobile-break) {
         background-image: image-url('portfolio/pavegen@2x.png');
-      }      
+      }
     }
     #everydayiplay-background {
       background-image: image-url('portfolio/everydayiplay-top.png');
       @media screen and (max-width: $mobile-break) {
         background-image: image-url('portfolio/everydayiplay@2x.png');
-      }      
+      }
     }
-    
+
     .portfolio-header-background{
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       height: 295px;
     }
-    
+
     #description {
       font-family: "chaparral-pro";
       font-size: 1.2em;
@@ -220,7 +232,7 @@
       ul {
         padding: 0;
         margin: 0;
-        margin-bottom: 15px;      
+        margin-bottom: 15px;
         li {
           list-style: none;
           font-family: "chaparral-pro";
@@ -229,7 +241,7 @@
         }
       }
       a {
-        color: #000000;      
+        color: #000000;
         border: 2px solid #000000;
         padding: 10px 20px;
         line-height: 4em;
@@ -246,6 +258,6 @@
         max-width: 100%;
         padding: 10px 0;
       }
-    }  
+    }
   }
 }
