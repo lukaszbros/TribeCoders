@@ -155,19 +155,19 @@
         case "all":
           $(".blackandwhite").stop().fadeTo("fast", 0.01);
           return $("#selector .arrow-down").animate({
-            left: "-160px"
+            left: "-85px"
           });
         case "team":
           $(".blackandwhite").stop().fadeTo("fast", 1);
           $(".team").stop().fadeTo("fast", 0.01);
           return $("#selector .arrow-down").animate({
-            left: "-80px"
+            left: "0px"
           });
         case "web":
           $(".blackandwhite").stop().fadeTo("fast", 1);
           $(".web").stop().fadeTo("fast", 0.01);
           return $("#selector .arrow-down").animate({
-            left: "0px"
+            left: "85px"
           });
         case "mobile":
           $(".blackandwhite").stop().fadeTo("fast", 1);

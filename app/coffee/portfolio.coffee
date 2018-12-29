@@ -8,15 +8,15 @@ $(document).ready ->
     switch id
       when "all"
         $(".blackandwhite").stop().fadeTo( "fast" , 0.01)
-        $("#selector .arrow-down").animate ({left:"-160px"})
+        $("#selector .arrow-down").animate ({left:"-85px"})
       when "team"
         $(".blackandwhite").stop().fadeTo( "fast" , 1)
         $(".team").stop().fadeTo( "fast" , 0.01)
-        $("#selector .arrow-down").animate ({left:"-80px"})
+        $("#selector .arrow-down").animate ({left:"0px"})
       when "web"
         $(".blackandwhite").stop().fadeTo( "fast" , 1)
         $(".web").stop().fadeTo( "fast" , 0.01)
-        $("#selector .arrow-down").animate ({left:"0px"})
+        $("#selector .arrow-down").animate ({left:"85px"})
       when "mobile"
         $(".blackandwhite").stop().fadeTo( "fast" , 1)
         $(".mobile").stop().fadeTo( "fast" , 0.01)

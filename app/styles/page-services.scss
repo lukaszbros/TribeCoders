@@ -62,10 +62,10 @@
   }
   #team-building {
     .service {
-      background-color: $service-outsourcing-color;
+      background-color: $service-operations-color;
     }
     .services-separator {
-      border-top-color: $service-outsourcing-color;
+      border-top-color: $service-operations-color;
     }
     .content {
 
@@ -74,7 +74,7 @@
         font-family: "chaparral-pro";
         font-style: italic;
         span {
-          color: $service-outsourcing-color;
+          color: $service-operations-color;
         }
       }
       #contact {
@@ -88,8 +88,8 @@
         padding: 10px 20px;
         line-height: 2.3em;
         &:hover {
-          color: $service-outsourcing-color;
-          border-color: $service-outsourcing-color;
+          color: $service-operations-color;
+          border-color: $service-operations-color;
         }
       }
     }
