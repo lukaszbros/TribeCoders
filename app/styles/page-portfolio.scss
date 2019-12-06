@@ -181,9 +181,9 @@
     /* Headers for different projects */
     #collective-sense-background {
       background-image: image-url('portfolio/collective-sense-top.png');
-    }
-    @media screen and (max-width: $mobile-break) {
-      background-image: image-url('portfolio/collective-sense@2x.png');
+      @media screen and (max-width: $mobile-break) {
+        background-image: image-url('portfolio/collective-sense@2x.png');
+      }
     }
     #touramigo-background {
         background-image: image-url('portfolio/touramigo-top.png');
@@ -193,12 +193,9 @@
     }
     #tribecoding-background {
       background-image: image-url('portfolio/tribecoding-top.png');
-    }
-    @media screen and (max-width: $mobile-break) {
-      background-image: image-url('portfolio/tribecoding@2x.png');
-    }
-    @media screen and (max-width: $mobile-break) {
-      background-image: image-url('portfolio/tribecoding@2x.png');
+      @media screen and (max-width: $mobile-break) {
+        background-image: image-url('portfolio/tribecoding@2x.png');
+      }
     }
     #zrechnung-background {
       background-image: image-url('portfolio/zrechnung-top.png');
