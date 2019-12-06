@@ -27,6 +27,7 @@
         list-style: none;
         display: block;
         width: 33%;
+        margin-bottom: 10px;
         a {
           color: #000000;
           &:hover {
@@ -49,12 +50,18 @@
   .zrechnung-color-img{
     @include image-div('portfolio/zrechnung-color');
   }
-.touramigo-img{
-    @include image-div('portfolio/touramigo');
-}
-.touramigo-color-img{
-    @include image-div('portfolio/touramigo-color');
-}
+  .touramigo-img{
+      @include image-div('portfolio/touramigo');
+  }
+  .touramigo-color-img{
+      @include image-div('portfolio/touramigo-color');
+  }
+  .tribecoding-img{
+    @include image-div('portfolio/tribecoding');
+  }
+  .tribecoding-color-img{
+      @include image-div('portfolio/tribecoding-color');
+  }
   .facets-img{
     @include image-div('portfolio/facets');
   }
@@ -93,7 +100,7 @@
       margin: 0;
       width: 100%;
       li {
-        width: 20%;
+        width: 16.66%;
         float: left;
         list-style: none;
         position: relative;
@@ -174,15 +181,24 @@
     /* Headers for different projects */
     #collective-sense-background {
       background-image: image-url('portfolio/collective-sense-top.png');
-      @media screen and (max-width: $mobile-break) {
-        background-image: image-url('portfolio/collective-sense@2x.png');
-      }
+    }
+    @media screen and (max-width: $mobile-break) {
+      background-image: image-url('portfolio/collective-sense@2x.png');
     }
     #touramigo-background {
         background-image: image-url('portfolio/touramigo-top.png');
         @media screen and (max-width: $mobile-break) {
             background-image: image-url('portfolio/touramigo@2x.png');
         }
+    }
+    #tribecoding-background {
+      background-image: image-url('portfolio/tribecoding-top.png');
+    }
+    @media screen and (max-width: $mobile-break) {
+      background-image: image-url('portfolio/tribecoding@2x.png');
+    }
+    @media screen and (max-width: $mobile-break) {
+      background-image: image-url('portfolio/tribecoding@2x.png');
     }
     #zrechnung-background {
       background-image: image-url('portfolio/zrechnung-top.png');
