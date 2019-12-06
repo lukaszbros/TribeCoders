@@ -110,7 +110,7 @@
         }
         div{
           @media screen and (max-width: $mobile-break) {
-            background-size: cover;
+            max-width: 100%;
           }
         }
         .blackandwhite{
@@ -182,55 +182,55 @@
     #collective-sense-background {
       background-image: image-url('portfolio/collective-sense-top.png');
       @media screen and (max-width: $mobile-break) {
-        background-image: image-url('portfolio/collective-sense@2x.png');
+        background-image: image-url('portfolio/collective-sense-color@2x.png');
       }
     }
     #touramigo-background {
         background-image: image-url('portfolio/touramigo-top.png');
         @media screen and (max-width: $mobile-break) {
-            background-image: image-url('portfolio/touramigo@2x.png');
+            background-image: image-url('portfolio/touramig-coloro@2x.png');
         }
     }
     #tribecoding-background {
       background-image: image-url('portfolio/tribecoding-top.png');
       @media screen and (max-width: $mobile-break) {
-        background-image: image-url('portfolio/tribecoding@2x.png');
+        background-image: image-url('portfolio/tribecoding-color@2x.png');
       }
     }
     #zrechnung-background {
       background-image: image-url('portfolio/zrechnung-top.png');
       @media screen and (max-width: $mobile-break) {
-        background-image: image-url('portfolio/zrechnung@2x.png');
+        background-image: image-url('portfolio/zrechnung-color@2x.png');
       }
     }
     #racinglife-background {
       background-image: image-url('portfolio/racinglife-top.png');
       @media screen and (max-width: $mobile-break) {
-        background-image: image-url('portfolio/racinglife@2x.png');
+        background-image: image-url('portfolio/racinglife-color@2x.png');
       }
     }
     #mgmt-background {
       background-image: image-url('portfolio/mgmt-top.png');
       @media screen and (max-width: $mobile-break) {
-        background-image: image-url('portfolio/mgmt@2x.png');
+        background-image: image-url('portfolio/mgmt-color@2x.png');
       }
     }
     #facets-background {
       background-image: image-url('portfolio/facets-top.png');
       @media screen and (max-width: $mobile-break) {
-        background-image: image-url('portfolio/facets@2x.png');
+        background-image: image-url('portfolio/facets-color@2x.png');
       }
     }
     #pavegen-background {
       background-image: image-url('portfolio/pavegen-top.png');
       @media screen and (max-width: $mobile-break) {
-        background-image: image-url('portfolio/pavegen@2x.png');
+        background-image: image-url('portfolio/pavegen-color@2x.png');
       }
     }
     #everydayiplay-background {
       background-image: image-url('portfolio/everydayiplay-top.png');
       @media screen and (max-width: $mobile-break) {
-        background-image: image-url('portfolio/everydayiplay@2x.png');
+        background-image: image-url('portfolio/everydayiplay-color@2x.png');
       }
     }
 
