@@ -180,24 +180,28 @@
   {
     /* Headers for different projects */
     #collective-sense-background {
+      background-size: contain;
       background-image: image-url('portfolio/collective-sense-top.png');
       @media screen and (max-width: $mobile-break) {
         background-image: image-url('portfolio/collective-sense-color@2x.png');
       }
     }
     #touramigo-background {
+        background-size: contain;
         background-image: image-url('portfolio/touramigo-top.png');
         @media screen and (max-width: $mobile-break) {
             background-image: image-url('portfolio/touramig-coloro@2x.png');
         }
     }
     #tribecoding-background {
+      background-size: contain;
       background-image: image-url('portfolio/tribecoding-top.png');
       @media screen and (max-width: $mobile-break) {
         background-image: image-url('portfolio/tribecoding-color@2x.png');
       }
     }
     #zrechnung-background {
+      background-size: contain;
       background-image: image-url('portfolio/zrechnung-top.png');
       @media screen and (max-width: $mobile-break) {
         background-image: image-url('portfolio/zrechnung-color@2x.png');
@@ -210,24 +214,28 @@
       }
     }
     #mgmt-background {
+      background-size: contain;
       background-image: image-url('portfolio/mgmt-top.png');
       @media screen and (max-width: $mobile-break) {
         background-image: image-url('portfolio/mgmt-color@2x.png');
       }
     }
     #facets-background {
+      background-size: contain;
       background-image: image-url('portfolio/facets-top.png');
       @media screen and (max-width: $mobile-break) {
         background-image: image-url('portfolio/facets-color@2x.png');
       }
     }
     #pavegen-background {
+      background-size: contain;
       background-image: image-url('portfolio/pavegen-top.png');
       @media screen and (max-width: $mobile-break) {
         background-image: image-url('portfolio/pavegen-color@2x.png');
       }
     }
     #everydayiplay-background {
+      background-size: contain;
       background-image: image-url('portfolio/everydayiplay-top.png');
       @media screen and (max-width: $mobile-break) {
         background-image: image-url('portfolio/everydayiplay-color@2x.png');
